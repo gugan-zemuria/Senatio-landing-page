@@ -1034,9 +1034,10 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
 }
 
 .bos-stages-content {
-  width: min(400px, 100%);
+  width: min(480px, 100%);
   min-width: 0;
   position: relative;
+  margin-left: clamp(0px, 4vw, 48px);
 }
 @media (max-width: 600px) {
   .bos-stage-meta {

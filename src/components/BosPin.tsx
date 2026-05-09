@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const stages = [
   {
@@ -45,16 +45,44 @@ export default function BosPin() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pinRef = useRef<HTMLElement>(null);
   const [activeStage, setActiveStage] = useState(0);
+  const morphProgressRef = useRef(0);
+
+  // Scroll-based stage transitions — independent of Three.js
+  const updateProgress = useCallback(() => {
+    const pin = pinRef.current;
+    if (!pin) return;
+
+    const r = pin.getBoundingClientRect();
+    const total = pin.offsetHeight - window.innerHeight;
+    const scrolled = Math.max(0, -r.top);
+    const progress = Math.max(0, Math.min(1, scrolled / total));
+    morphProgressRef.current = progress;
+
+    let stage = 0;
+    if (progress > 0.66) stage = 2;
+    else if (progress > 0.33) stage = 1;
+    setActiveStage(stage);
+  }, []);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const pin = pinRef.current;
-    if (!canvas || !pin) return;
+    updateProgress();
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  }, [updateProgress]);
 
-    // Check if canvas is visible
+  // Three.js particle morph — separate effect
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     if (getComputedStyle(canvas).display === "none") return;
 
     let disposed = false;
+    let animId: number;
+    let resizeHandler: () => void;
 
     import("three").then((THREE) => {
       if (disposed) return;
@@ -171,31 +199,14 @@ export default function BosPin() {
       );
       scene.add(cubeWire);
 
-      function resize() {
-        const r = canvas!.getBoundingClientRect();
+      resizeHandler = () => {
+        const r = canvas.getBoundingClientRect();
         renderer.setSize(r.width, r.height, false);
         camera.aspect = r.width / r.height;
         camera.updateProjectionMatrix();
-      }
-      resize();
-      window.addEventListener("resize", resize);
-
-      let morphProgress = 0;
-
-      function updateProgress() {
-        const r = pin!.getBoundingClientRect();
-        const total = pin!.offsetHeight - window.innerHeight;
-        const scrolled = Math.max(0, -r.top);
-        morphProgress = Math.max(0, Math.min(1, scrolled / total));
-
-        let stage = 0;
-        if (morphProgress > 0.66) stage = 2;
-        else if (morphProgress > 0.33) stage = 1;
-        setActiveStage(stage);
-      }
-      updateProgress();
-      window.addEventListener("scroll", updateProgress);
-      window.addEventListener("resize", updateProgress);
+      };
+      resizeHandler();
+      window.addEventListener("resize", resizeHandler);
 
       function lerpStates(
         a: Float32Array,
@@ -210,11 +221,10 @@ export default function BosPin() {
       const fgC = threeColor("--three-fg");
       const acC = threeColor("--three-accent");
 
-      let animId: number;
       function render(now: number) {
         if (disposed) return;
 
-        const p = morphProgress;
+        const p = morphProgressRef.current;
         let A: Float32Array, B: Float32Array, t: number;
         if (p < 0.5) {
           A = stateBuild;
@@ -274,24 +284,12 @@ export default function BosPin() {
       }
 
       animId = requestAnimationFrame(render);
-
-      // Cleanup
-      return () => {
-        disposed = true;
-        cancelAnimationFrame(animId);
-        window.removeEventListener("resize", resize);
-        window.removeEventListener("scroll", updateProgress);
-        window.removeEventListener("resize", updateProgress);
-        geo.dispose();
-        mat.dispose();
-        cubeGeo.dispose();
-        cubeWireMat.dispose();
-        renderer.dispose();
-      };
     });
 
     return () => {
       disposed = true;
+      if (animId) cancelAnimationFrame(animId);
+      if (resizeHandler) window.removeEventListener("resize", resizeHandler);
     };
   }, []);
 
