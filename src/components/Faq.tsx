@@ -1,0 +1,101 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+const faqs = [
+  {
+    q: "Is this outsourcing?",
+    a: "No. Senatio is built around managed engineering capability from India. The model gives clients a stronger operating structure, more continuity, and more control than a traditional outsourcing relationship.",
+  },
+  {
+    q: "Is this staff augmentation?",
+    a: "No. Senatio is not built around loose seat-filling. The model is based on building and operating engineering teams with structure, visibility, and support.",
+  },
+  {
+    q: "Do you only help with hiring?",
+    a: "No. Hiring is only one part of the model. Senatio also helps with team setup, onboarding, operating discipline, continuity, and scale.",
+  },
+  {
+    q: "How quickly can a team be launched?",
+    a: "In many cases, teams launch in 2 weeks or less, depending on role requirements, hiring complexity, and team structure.",
+  },
+  {
+    q: "Can we start small?",
+    a: "Yes. Most engagements should ideally start with at least a 2-engineer team, but smaller pilot structures can be discussed where appropriate.",
+  },
+  {
+    q: "Can we scale later?",
+    a: "Yes. The model is designed to help clients scale up as needs grow and reduce team size cleanly when priorities change.",
+  },
+  {
+    q: "How is pricing structured?",
+    a: "Pricing is structured around a setup phase, all-inclusive monthly per-engineer pricing, and added oversight support for larger teams where needed.",
+  },
+  {
+    q: "Do you manage execution too?",
+    a: "Yes. Senatio creates operating discipline around the team through reporting, continuity support, and execution oversight.",
+  },
+  {
+    q: "What makes Senatio different from recruiting firms?",
+    a: "Recruiting firms help fill roles. Senatio helps build, operate, and scale engineering teams with the structure needed to make those teams work well over time.",
+  },
+];
+
+export default function Faq() {
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const items = listRef.current?.querySelectorAll(".faq-item");
+    if (!items) return;
+
+    const handleToggle = (e: Event) => {
+      const target = e.currentTarget as HTMLDetailsElement;
+      if (target.open) {
+        items.forEach((other) => {
+          if (other !== target) (other as HTMLDetailsElement).open = false;
+        });
+      }
+    };
+
+    items.forEach((item) => item.addEventListener("toggle", handleToggle));
+    return () => {
+      items.forEach((item) => item.removeEventListener("toggle", handleToggle));
+    };
+  }, []);
+
+  return (
+    <section className="section" id="faq" aria-labelledby="faq-h">
+      <div className="wrap">
+        <div className="section-head">
+          <div data-reveal data-delay="1">
+            <h2 className="section-title" id="faq-h">
+              Questions clients <em>usually ask.</em>
+            </h2>
+            <p className="section-lede">
+              From launch speed to pricing structure to execution support, here
+              are the questions teams typically ask before getting started.
+            </p>
+          </div>
+        </div>
+
+        <div className="faq-list" ref={listRef}>
+          {faqs.map((faq, i) => (
+            <details className="faq-item" key={i} data-reveal>
+              <summary>
+                <span className="faq-num">
+                  Q.{String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="faq-q">{faq.q}</span>
+                <span className="faq-toggle" aria-hidden="true" />
+              </summary>
+              <div className="faq-a">
+                <span className="faq-spacer" />
+                <p>{faq.a}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
