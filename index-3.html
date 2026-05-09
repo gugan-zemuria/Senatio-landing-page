@@ -1109,10 +1109,23 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
 .why .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: clamp(32px, 6vw, 56px);
 }
-@media (min-width: 980px) {
-  .why .grid { grid-template-columns: 1fr 1fr; gap: 80px; }
+@media (min-width: 1100px) {
+  .why .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    min-height: clamp(560px, 80svh, 960px);
+  }
+  .why-list {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+  .why-list li {
+    flex: 1;
+    min-height: 80px;
+  }
 }
 .why-list {
   list-style: none; padding: 0; margin: 0;
@@ -1122,7 +1135,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
   display: grid;
   grid-template-columns: 60px 1fr 24px;
   gap: 18px;
-  padding: 22px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line);
   align-items: center;
   transition: padding .3s ease, color .3s ease;
@@ -1148,13 +1161,15 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
   transform: translateX(-8px);
   transition: opacity .3s ease, transform .3s ease;
   color: var(--accent);
+  justify-self: end;
 }
 .why-list li:hover .why-arrow { opacity: 1; transform: translateX(0); }
 
 .why-aside {
-  position: sticky;
-  top: 120px;
   align-self: start;
+}
+.why-aside .section-head {
+  margin-bottom: clamp(28px, 4vw, 44px);
 }
 .why-aside p {
   font-size: clamp(1.02rem, 1.18vw, 1.18rem);
@@ -1163,6 +1178,22 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
   margin: 0 0 22px 0;
 }
 .why-aside p:last-of-type { color: var(--fg); }
+@media (min-width: 1100px) {
+  .why-aside {
+    position: sticky;
+    top: 120px;
+  }
+}
+@media (max-width: 680px) {
+  .why-list li {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+  .why-list .why-arrow {
+    display: none;
+  }
+}
 
 /* ────────────────────────────────────────────────────────────
    LEDGER (what you are actually getting)
@@ -2026,14 +2057,11 @@ footer {
 <!-- ────────────────────────── WHY ────────────────────────── -->
 <section class="section why" id="why" aria-labelledby="why-h">
   <div class="wrap">
-    <div class="section-head">
-      <div data-reveal data-delay="1">
-        <h2 class="section-title" id="why-h">Built for speed, control, and <em>reliable execution.</em></h2>
-      </div>
-    </div>
-
     <div class="grid">
       <div class="why-aside" data-reveal>
+        <div class="section-head">
+          <h2 class="section-title" id="why-h">Built for speed, control, and <em>reliable execution.</em></h2>
+        </div>
         <p>Senatio is designed for companies that want engineering capability from India without having to build the entire operating layer themselves.</p>
         <p>The value is not only in finding engineers. The value is in helping the team launch well, run well, and remain dependable as it grows.</p>
         <p>Senatio helps clients build engineering capacity with more structure, more visibility, and less operational drag.</p>
