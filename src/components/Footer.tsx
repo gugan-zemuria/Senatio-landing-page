@@ -30,62 +30,36 @@ export default function Footer() {
           <div className="foot-col">
             <h5>Capability</h5>
             <ul>
-              <li>
-                <Link href="/how-it-works">How It Works</Link>
-              </li>
-              <li>
-                <Link href="/engineering-roles">Engineering Roles</Link>
-              </li>
-              <li>
-                <Link href="/execution-improvement">Execution Improvement</Link>
-              </li>
-              <li>
-                <Link href="/pricing">Pricing</Link>
-              </li>
-              <li>
-                <Link href="/case-studies">Case Studies</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="foot-col">
-            <h5>Company</h5>
-            <ul>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/faq">FAQ</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
+              <li><Link href="/how-it-works">How It Works</Link></li>
+              <li><Link href="/engineering-roles">Engineering Roles</Link></li>
+              <li><Link href="/execution-improvement">Execution Improvement</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
+              <li><Link href="/case-studies">Case Studies</Link></li>
             </ul>
           </div>
           <div className="foot-col">
             <h5>Services</h5>
             <ul>
-              <li>
-                <Link href="/offshore-engineering-team-india">Offshore Engineering Teams</Link>
-              </li>
-              <li>
-                <Link href="/remote-engineering-team-india">Remote Engineering Teams</Link>
-              </li>
-              <li>
-                <Link href="/managed-engineering-teams">Managed Engineering Teams</Link>
-              </li>
-              <li>
-                <Link href="/engineering-team-scaling">Engineering Team Scaling</Link>
-              </li>
-              <li>
-                <Link href="/engineering-workflow-automation">Engineering Workflow Automation</Link>
-              </li>
+              <li><Link href="/offshore-engineering-team-india">Offshore Teams</Link></li>
+              <li><Link href="/remote-engineering-team-india">Remote Teams</Link></li>
+              <li><Link href="/managed-engineering-teams">Managed Teams</Link></li>
+              <li><Link href="/engineering-team-scaling">Team Scaling</Link></li>
+              <li><Link href="/engineering-workflow-automation">Workflow Automation</Link></li>
             </ul>
           </div>
           <div className="foot-col">
-            <h5>Office</h5>
-            <ul>
+            <div className="foot-col-inner">
+              <h5>Company</h5>
+              <ul>
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/faq">FAQ</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
+              </ul>
+            </div>
+            <div className="foot-col-inner">
+              <h5>Office</h5>
               <FooterAddress />
-            </ul>
+            </div>
           </div>
         </div>
 
