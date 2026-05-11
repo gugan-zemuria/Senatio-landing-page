@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FooterAddress from "./FooterAddress";
 
 export default function Footer() {
   return (
@@ -81,11 +82,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="foot-col">
-            <h5>Locations</h5>
+            <h5>Office</h5>
             <ul>
-              <li>Bengaluru · IND</li>
-              <li>New York · USA</li>
-              <li>London · GBR</li>
+              <FooterAddress />
             </ul>
           </div>
         </div>

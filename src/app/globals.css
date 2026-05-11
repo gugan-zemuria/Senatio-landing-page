@@ -1718,11 +1718,10 @@ footer {
   font-size: 10.5px;
   letter-spacing: 0.16em;
   color: var(--muted);
-  text-transform: uppercase;
 }
 .foot-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 32px;
 }
 @media (max-width: 800px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
@@ -1731,10 +1730,12 @@ footer {
   font-size: 10.5px; letter-spacing: 0.18em;
   color: var(--fg-2);
   margin: 0 0 16px 0;
+  text-transform: uppercase;
 }
 .foot-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .foot-col a { color: var(--muted); transition: color .3s ease; }
 .foot-col a:hover { color: var(--fg); }
+.foot-col a, .foot-col li { text-transform: none; letter-spacing: 0.06em; }
 
 .foot-brand {
   font-family: var(--serif);
@@ -1756,6 +1757,22 @@ footer {
   line-height: 1.5;
   font-size: 11px;
   margin-bottom: 24px;
+}
+.foot-col li.foot-addr {
+  text-transform: none;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  font-size: 10px;
+  color: var(--muted);
+}
+.foot-col li.foot-addr strong {
+  color: var(--fg-2);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 9.5px;
+  display: block;
+  margin-bottom: 4px;
 }
 .foot-bottom {
   margin-top: 56px;
