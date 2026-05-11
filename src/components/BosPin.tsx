@@ -112,7 +112,7 @@ export default function BosPin() {
       });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-      const COUNT = 2400;
+      const COUNT = 2744;
 
       // State 0 — Scattered cloud (Build)
       const stateBuild = new Float32Array(COUNT * 3);
