@@ -435,6 +435,7 @@ html[data-theme="light"] .logo-dark { display: none; }
   font-size: 10px;
   color: var(--muted);
   letter-spacing: 0.14em;
+  margin-top: 10px;
   margin-left: 12px;
   padding-left: 12px;
   border-left: 1px solid var(--line);
