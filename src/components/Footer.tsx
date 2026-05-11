@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer id="footer">
@@ -28,16 +30,19 @@ export default function Footer() {
             <h5>Capability</h5>
             <ul>
               <li>
-                <a href="#how-it-works">How It Works</a>
+                <Link href="/how-it-works">How It Works</Link>
               </li>
               <li>
-                <a href="#roles">Engineering Roles</a>
+                <Link href="/engineering-roles">Engineering Roles</Link>
               </li>
               <li>
-                <a href="#pricing">Pricing</a>
+                <Link href="/execution-improvement">Execution Improvement</Link>
               </li>
               <li>
-                <a href="#cases">Case Studies</a>
+                <Link href="/pricing">Pricing</Link>
+              </li>
+              <li>
+                <Link href="/case-studies">Case Studies</Link>
               </li>
             </ul>
           </div>
@@ -45,13 +50,13 @@ export default function Footer() {
             <h5>Company</h5>
             <ul>
               <li>
-                <a href="#about">About</a>
+                <Link href="/about">About</Link>
               </li>
               <li>
-                <a href="#faq">FAQ</a>
+                <Link href="/faq">FAQ</Link>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>

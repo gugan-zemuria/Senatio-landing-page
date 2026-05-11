@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BtnArrow = () => (
   <svg
     className="btn-arrow"
@@ -187,10 +189,10 @@ export default function Roles() {
           <p className="pull">
             We help clients build teams, <em>not just fill seats.</em>
           </p>
-          <a href="#contact" className="btn">
+          <Link href="/contact" className="btn">
             <span>Talk to us about your ideal team structure</span>
             <BtnArrow />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

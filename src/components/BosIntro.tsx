@@ -13,7 +13,7 @@ export default function BosIntro() {
           <p className="section-lede">
             Senatio is built around a simple model: Build, Operate, Scale. We
             help clients launch the right team, run it with discipline, and
-            expand it without unnecessary operational friction.
+            expand it without unnecessary friction.
           </p>
         </div>
       </div>

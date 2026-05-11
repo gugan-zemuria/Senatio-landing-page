@@ -22,10 +22,9 @@ export default function Positioning() {
               grows.
             </p>
             <p>
-              The result is not just additional engineering capacity. It is a
-              managed engineering capability that can launch fast, perform
-              reliably, and scale with more control.
-            </p>
+                Where useful, we also help improve the workflows around the team
+                so delivery stays clearer, faster, and easier to manage.
+              </p>
           </div>
         </div>
       </div>
