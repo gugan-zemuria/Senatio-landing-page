@@ -2,12 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 
+let loadedInSession = false;
+
 export default function Loader() {
+  const [phase, setPhase] = useState<"hidden" | "playing" | "done">("hidden");
   const [pct, setPct] = useState(0);
-  const [done, setDone] = useState(false);
   const streamRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (loadedInSession) return;
+
+    loadedInSession = true;
+    setPhase("playing");
+
     let current = 0;
     const timer = setInterval(() => {
       const inc =
@@ -24,16 +31,18 @@ export default function Loader() {
 
       if (current >= 100) {
         clearInterval(timer);
-        setTimeout(() => setDone(true), 500);
+        setTimeout(() => setPhase("done"), 500);
       }
     }, 60);
 
     return () => clearInterval(timer);
   }, []);
 
+  if (phase === "hidden") return null;
+
   return (
     <div
-      className={`loader${done ? " done" : ""}`}
+      className={`loader${phase === "done" ? " done" : ""}`}
       aria-hidden="true"
     >
       <div className="loader-inner">
