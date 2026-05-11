@@ -445,21 +445,22 @@ a { color: inherit; text-decoration: none; }
 }
 .brand {
   display: flex; align-items: center; gap: 10px;
-  font-family: var(--serif);
-  font-variation-settings: "opsz" 144, "SOFT" 30, "wght" 500;
-  font-size: 22px;
-  letter-spacing: -0.01em;
   color: var(--fg);
 }
-.brand-mark {
-  display: inline-block;
-  width: 10px; height: 10px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  transform: rotate(45deg);
-  margin-right: 4px;
-  position: relative;
-  top: -1px;
+.brand-logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+.logo-light { display: none; }
+.logo-dark { display: block; }
+html[data-theme="light"] .logo-light { display: block; }
+html[data-theme="light"] .logo-dark { display: none; }
+
+@media (max-width: 680px) {
+  .brand-logo {
+    height: 20px;
+  }
 }
 .brand-suffix {
   font-family: var(--mono);
@@ -1758,17 +1759,17 @@ footer {
 .foot-col a:hover { color: var(--fg); }
 
 .foot-brand {
-  font-family: var(--serif);
-  font-variation-settings: "opsz" 144, "SOFT" 30, "wght" 500;
-  font-style: normal;
-  font-size: 38px;
-  letter-spacing: -0.02em;
-  color: var(--fg);
-  text-transform: none;
+  display: flex;
   margin-bottom: 14px;
-  line-height: 1;
 }
-.foot-brand em { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 90; color: var(--accent-2); }
+.foot-brand .brand-logo {
+  height: 38px;
+}
+@media (max-width: 680px) {
+  .foot-brand .brand-logo {
+    height: 28px;
+  }
+}
 .foot-tag {
   color: var(--muted);
   max-width: 30ch;
@@ -1826,7 +1827,10 @@ footer {
       <span>Senatio · Operator's Broadsheet</span>
       <span class="accent">Starting Sequence</span>
     </div>
-    <div class="loader-mark">Senatio<span class="accent">.</span></div>
+    <div class="loader-mark" style="display: flex;">
+      <img src="public/senatio_dark_logo.svg" alt="Senatio" class="brand-logo logo-dark" style="height: clamp(3rem, 8vw, 6rem);" />
+      <img src="public/senatio_light_logo.svg" alt="Senatio" class="brand-logo logo-light" style="height: clamp(3rem, 8vw, 6rem);" />
+    </div>
     <div class="loader-stream" id="loader-stream">
       <div class="line">[<span class="ok">OK</span>] team.design.matrix ............... aligned</div>
       <div class="line">[<span class="ok">OK</span>] launch.readiness.window .......... open</div>
@@ -1850,8 +1854,8 @@ footer {
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="#home" class="brand" aria-label="Senatio home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      Senatio
+      <img src="public/senatio_dark_logo.svg" alt="Senatio" class="brand-logo logo-dark" />
+      <img src="public/senatio_light_logo.svg" alt="Senatio" class="brand-logo logo-light" />
       <span class="brand-suffix">Build · Operate · Scale</span>
     </a>
     <ul class="nav-links">
@@ -2573,7 +2577,10 @@ footer {
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <div class="foot-brand">Senatio<em>.</em></div>
+        <div class="foot-brand">
+          <img src="public/senatio_dark_logo.svg" alt="Senatio" class="brand-logo logo-dark" />
+          <img src="public/senatio_light_logo.svg" alt="Senatio" class="brand-logo logo-light" />
+        </div>
         <p class="foot-tag">An operator-led partner for global companies building engineering teams from India.</p>
         <div style="display:flex; gap:8px; align-items:center; color: var(--accent);">
           <span class="status-dot" aria-hidden="true"></span>

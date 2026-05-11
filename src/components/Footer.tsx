@@ -5,7 +5,8 @@ export default function Footer() {
         <div className="foot-grid">
           <div className="foot-col">
             <div className="foot-brand">
-              Senatio<em>.</em>
+              <img src="/senatio_dark_logo.svg" alt="Senatio" className="brand-logo logo-dark" />
+              <img src="/senatio_light_logo.svg" alt="Senatio" className="brand-logo logo-light" />
             </div>
             <p className="foot-tag">
               An operator-led partner for global companies building engineering

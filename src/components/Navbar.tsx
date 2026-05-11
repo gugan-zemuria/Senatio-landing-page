@@ -21,8 +21,8 @@ export default function Navbar() {
     <nav className="nav" aria-label="Primary">
       <div className="nav-inner">
         <a href="#home" className="brand" aria-label="Senatio home">
-          <span className="brand-mark" aria-hidden="true" />
-          Senatio
+          <img src="/senatio_dark_logo.svg" alt="Senatio" className="brand-logo logo-dark" />
+          <img src="/senatio_light_logo.svg" alt="Senatio" className="brand-logo logo-light" />
           <span className="brand-suffix">Build · Operate · Scale</span>
         </a>
         <ul className="nav-links">
