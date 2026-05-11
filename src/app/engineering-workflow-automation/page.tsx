@@ -28,13 +28,19 @@ const BtnArrow = () => (
   </svg>
 );
 
-const improveItems = [
-  "Delivery reporting and visibility",
-  "Status tracking and internal coordination",
-  "Repetitive manual operational tasks",
-  "QA and release process friction",
-  "Workflow clarity across product, engineering, and operations",
-  "Practical AI-enabled internal workflows where useful",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const improveItems: CardItem[] = [
+  { num: "01", title: "Delivery reporting and visibility", desc: "Clear visibility into delivery progress, blockers, and team throughput." },
+  { num: "02", title: "Status tracking and coordination", desc: "Tighter internal coordination across product, engineering, and ops." },
+  { num: "03", title: "Repetitive manual operational tasks", desc: "Automation of repetitive manual steps that slow engineers down." },
+  { num: "04", title: "QA and release process friction", desc: "Smoother QA and release workflows that reduce delays and errors." },
+  { num: "05", title: "Workflow clarity", desc: "Clearer handoffs and ownership across the engineering org." },
+  { num: "06", title: "Practical AI-enabled workflows", desc: "AI-enabled internal workflows where they create real efficiency." },
 ];
 
 export default function WorkflowAutomationPage() {
@@ -102,24 +108,32 @@ export default function WorkflowAutomationPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {improveItems.map((item, i) => (
+              {improveItems.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

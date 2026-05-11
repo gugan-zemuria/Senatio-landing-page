@@ -28,20 +28,26 @@ const BtnArrow = () => (
   </svg>
 );
 
-const helps = [
-  "Define where full-stack roles fit best",
-  "Hire full-stack engineers in India quickly",
-  "Balance versatility with delivery quality",
-  "Support onboarding and workflow alignment",
-  "Integrate full-stack roles into a broader team design",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const helps: CardItem[] = [
+  { num: "01", title: "Define where full-stack fits", desc: "Clarify where full-stack roles add the most value in your team." },
+  { num: "02", title: "Hire full-stack engineers quickly", desc: "Fast full-stack hiring in India without compromising fit." },
+  { num: "03", title: "Balance versatility and quality", desc: "Balance full-stack versatility with strong delivery quality." },
+  { num: "04", title: "Onboarding and alignment", desc: "Engineers onboarded into workflows and aligned with your stack." },
+  { num: "05", title: "Integrate into team design", desc: "Full-stack roles integrated into a broader, coherent team structure." },
 ];
 
-const bestFit = [
-  "Early-stage product teams",
-  "Lean startup engineering teams",
-  "Rapid feature delivery",
-  "Teams that need fewer frontend-backend handoffs",
-  "Flexible engineering support across the stack",
+const bestFit: CardItem[] = [
+  { num: "01", title: "Early-stage product teams", desc: "Early-stage teams that need versatile engineers across the stack." },
+  { num: "02", title: "Lean startup teams", desc: "Lean startup engineering teams that move fast with fewer people." },
+  { num: "03", title: "Rapid feature delivery", desc: "Teams that need rapid feature delivery without handoff delays." },
+  { num: "04", title: "Fewer handoffs", desc: "Teams that benefit from fewer frontend-backend coordination points." },
+  { num: "05", title: "Flexible engineering support", desc: "Flexible engineering support across the full technology stack." },
 ];
 
 export default function FullstackPage() {
@@ -109,20 +115,28 @@ export default function FullstackPage() {
                 gap: "16px",
               }}
             >
-              {helps.map((item, i) => (
+              {helps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -142,24 +156,32 @@ export default function FullstackPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {bestFit.map((item, i) => (
+              {bestFit.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

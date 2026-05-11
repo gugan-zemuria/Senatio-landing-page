@@ -28,13 +28,19 @@ const BtnArrow = () => (
   </svg>
 );
 
-const senatioDifferences = [
-  "Faster launch timelines",
-  "Clearer team design",
-  "Managed onboarding",
-  "Reporting and visibility",
-  "Continuity and replacement support",
-  "Cleaner scaling over time",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const senatioDifferences: CardItem[] = [
+  { num: "01", title: "Faster launch timelines", desc: "Teams structured and launched quickly without sacrificing quality." },
+  { num: "02", title: "Clearer team design", desc: "Role definition and team structure aligned to your product and platform needs." },
+  { num: "03", title: "Managed onboarding", desc: "Engineers onboarded into your workflows and tooling from day one." },
+  { num: "04", title: "Reporting and visibility", desc: "Clear visibility into team performance, delivery, and operating health." },
+  { num: "05", title: "Continuity and replacement support", desc: "Team stays dependable as people and priorities shift." },
+  { num: "06", title: "Cleaner scaling over time", desc: "Scale up or down without disrupting execution quality." },
 ];
 
 export default function OffshoreEngineeringPage() {
@@ -111,25 +117,33 @@ export default function OffshoreEngineeringPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
                 paddingTop: "24px",
               }}
             >
-              {senatioDifferences.map((item, i) => (
+              {senatioDifferences.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -169,29 +183,37 @@ export default function OffshoreEngineeringPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
               {[
-                "Founders building product teams",
-                "Global startups expanding engineering capacity",
-                "Growth-stage companies building from India",
-                "Operators who need more reliable offshore execution",
-              ].map((item, i) => (
+                { num: "01", title: "Founders", desc: "Founders building product teams that need dependable offshore engineering." },
+                { num: "02", title: "Global startups", desc: "Global startups expanding engineering capacity from India." },
+                { num: "03", title: "Growth-stage companies", desc: "Growth-stage companies building from India with more structure." },
+                { num: "04", title: "Operators", desc: "Operators who need more reliable offshore execution and visibility." },
+              ].map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

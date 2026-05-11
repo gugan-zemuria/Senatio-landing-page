@@ -28,20 +28,26 @@ const BtnArrow = () => (
   </svg>
 );
 
-const helps = [
-  "Define the right DevOps role based on system complexity",
-  "Hire DevOps engineers in India faster",
-  "Support onboarding into infrastructure and release workflows",
-  "Improve alignment between DevOps and product engineering",
-  "Build more dependable operational capability over time",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const helps: CardItem[] = [
+  { num: "01", title: "Define the right DevOps role", desc: "Role definition based on your system complexity and infrastructure needs." },
+  { num: "02", title: "Hire DevOps engineers faster", desc: "Faster DevOps hiring in India without compromising on quality." },
+  { num: "03", title: "Onboarding into workflows", desc: "Engineers onboarded into infrastructure and release workflows." },
+  { num: "04", title: "Improve alignment", desc: "Better alignment between DevOps and product engineering teams." },
+  { num: "05", title: "Build dependable operations", desc: "Build more dependable operational capability that holds over time." },
 ];
 
-const priorities = [
-  "Deployment workflows",
-  "Infrastructure automation",
-  "Observability and monitoring",
-  "Environment stability",
-  "Scalable operational systems",
+const priorities: CardItem[] = [
+  { num: "01", title: "Deployment workflows", desc: "Reliable deployment workflows that reduce release friction." },
+  { num: "02", title: "Infrastructure automation", desc: "Infrastructure automation for consistent and repeatable environments." },
+  { num: "03", title: "Observability and monitoring", desc: "Observability and monitoring for faster issue detection and resolution." },
+  { num: "04", title: "Environment stability", desc: "Stable environments that engineering teams can depend on." },
+  { num: "05", title: "Scalable operational systems", desc: "Operational systems that scale cleanly as the team grows." },
 ];
 
 export default function DevopsPage() {
@@ -110,20 +116,28 @@ export default function DevopsPage() {
                 gap: "16px",
               }}
             >
-              {helps.map((item, i) => (
+              {helps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -143,24 +157,32 @@ export default function DevopsPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {priorities.map((item, i) => (
+              {priorities.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

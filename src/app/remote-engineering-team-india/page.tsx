@@ -28,13 +28,19 @@ const BtnArrow = () => (
   </svg>
 );
 
-const howHelps = [
-  "Team structure planning",
-  "Faster remote hiring",
-  "Onboarding support",
-  "Delivery rhythm and reporting",
-  "Continuity support",
-  "Scaling without losing clarity",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const howHelps: CardItem[] = [
+  { num: "01", title: "Team structure planning", desc: "Role definition and team design aligned to your product needs." },
+  { num: "02", title: "Faster remote hiring", desc: "Hiring process tuned for speed without compromising quality." },
+  { num: "03", title: "Onboarding support", desc: "Structured onboarding into your workflows, tooling, and culture." },
+  { num: "04", title: "Delivery rhythm and reporting", desc: "Consistent delivery cadence with clear visibility and reporting." },
+  { num: "05", title: "Continuity support", desc: "Team stays dependable as people and priorities shift." },
+  { num: "06", title: "Scaling without losing clarity", desc: "Scale up cleanly without introducing operational chaos." },
 ];
 
 export default function RemoteEngineeringPage() {
@@ -109,25 +115,33 @@ export default function RemoteEngineeringPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
                 paddingTop: "24px",
               }}
             >
-              {howHelps.map((item, i) => (
+              {howHelps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

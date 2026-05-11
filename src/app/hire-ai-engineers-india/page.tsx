@@ -28,20 +28,26 @@ const BtnArrow = () => (
   </svg>
 );
 
-const helps = [
-  "Clarify the real AI role requirement",
-  "Hire AI engineers in India with stronger role fit",
-  "Align AI work to product or workflow priorities",
-  "Support onboarding into technical and operational systems",
-  "Integrate AI engineers into a practical delivery model",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const helps: CardItem[] = [
+  { num: "01", title: "Clarify the AI role", desc: "Define what kind of AI capability you actually need before hiring." },
+  { num: "02", title: "Hire with stronger role fit", desc: "Hire AI engineers in India with clearer role definition and fit." },
+  { num: "03", title: "Align AI to priorities", desc: "AI work aligned to your product or workflow priorities." },
+  { num: "04", title: "Onboarding into systems", desc: "Engineers onboarded into your technical and operational systems." },
+  { num: "05", title: "Integrate into delivery", desc: "AI engineers integrated into a practical, structured delivery model." },
 ];
 
-const whereHelp = [
-  "Applied AI product features",
-  "Internal AI-enabled tooling",
-  "Workflow automation",
-  "Model operations and support systems",
-  "AI-assisted execution improvement",
+const whereHelp: CardItem[] = [
+  { num: "01", title: "Applied AI product features", desc: "AI features that improve product capability and user experience." },
+  { num: "02", title: "Internal AI-enabled tooling", desc: "Internal tools that use AI to improve team efficiency." },
+  { num: "03", title: "Workflow automation", desc: "AI-powered workflow automation that reduces manual effort." },
+  { num: "04", title: "Model operations", desc: "Operations and support systems for AI models in production." },
+  { num: "05", title: "AI-assisted execution", desc: "AI-assisted execution improvement across the engineering org." },
 ];
 
 export default function AiPage() {
@@ -109,20 +115,28 @@ export default function AiPage() {
                 gap: "16px",
               }}
             >
-              {helps.map((item, i) => (
+              {helps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -142,24 +156,32 @@ export default function AiPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {whereHelp.map((item, i) => (
+              {whereHelp.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
