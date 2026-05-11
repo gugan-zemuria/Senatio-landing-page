@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Contact Senatio — Build Your India Engineering Team",
+  title: "Contact Senatio | Build Your Engineering Team from India",
   description:
-    "Talk to Senatio about team structure, launch timelines, operating support, and commercial structure for your India engineering team.",
+    "Talk to Senatio about building, operating, improving, or scaling your engineering team from India with managed execution and stronger delivery support.",
 };
 
 const BtnArrow = () => (

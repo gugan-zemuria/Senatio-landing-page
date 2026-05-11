@@ -59,8 +59,8 @@ export default function Hero() {
 
             <p className="hero-sub">
               Senatio helps global companies launch high-performance engineering
-              teams in weeks, run them with operator-led discipline, and scale
-              without losing control.
+              teams from India in weeks, run them with operator-led discipline,
+              and scale without losing control.
             </p>
 
             <div className="hero-ctas">

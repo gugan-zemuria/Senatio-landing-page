@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "About Senatio — Operator-Led Engineering Capability",
+  title: "About Senatio | Engineering Teams from India",
   description:
-    "Senatio helps global companies build real engineering capability from India with more structure, more speed, and less operational friction.",
+    "Learn about Senatio's operator-led approach to helping global companies build, operate, and scale engineering teams from India with stronger execution and less friction.",
 };
 
 const BtnArrow = () => (
@@ -110,6 +110,27 @@ export default function AboutPage() {
                 hiring bursts or loose seat filling. They are built through
                 clearer team design, stronger operating rhythm, and practical
                 execution support. That is the gap Senatio is built to solve.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="partner-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="partner-h">
+                  What kind of partner <em>Senatio is.</em>
+                </h2>
+              </div>
+            </div>
+            <div style={{ maxWidth: "640px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                Senatio is not trying to be a broad consulting brand. It is a
+                focused partner for companies that want engineering capability
+                from India with more speed, more structure, and less operational
+                drag. That focus keeps the offer clearer, the delivery model
+                sharper, and the value easier to understand.
               </p>
             </div>
             <div style={{ marginTop: "24px" }} data-reveal>

@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Pricing — Managed Engineering Capability | Senatio",
+  title: "Managed Engineering Team Pricing from India | Senatio",
   description:
-    "Senatio's transparent pricing model: one-time setup, monthly per-engineer managed pricing, and shared oversight for larger teams.",
+    "Understand Senatio's pricing model for managed engineering teams from India, including setup, monthly managed pricing, delivery oversight, and scaling support.",
 };
 
 const BtnArrow = () => (
@@ -34,6 +34,7 @@ const pricingFactors = [
   "Team size",
   "Level of oversight required",
   "Complexity of the operating model",
+  "Execution support requirements where relevant",
 ];
 
 export default function PricingPage() {
@@ -77,7 +78,9 @@ export default function PricingPage() {
               <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
                 The setup fee covers the work required to launch the team
                 properly. That includes sourcing, hiring, onboarding, and initial
-                team setup.
+                team setup. Launching a team has real operational value, so it
+                should be treated as a meaningful phase rather than invisible
+                overhead.
               </p>
             </div>
           </div>
@@ -174,9 +177,31 @@ export default function PricingPage() {
             </div>
             <div style={{ maxWidth: "600px" }} data-reveal>
               <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Engineering teams are not built from identical seats. A structured
-                commercial model reflects the reality of how teams are launched,
-                run, and supported in practice.
+                Engineering teams are not built from identical seats. Different
+                teams require different mixes of skill, support, structure, and
+                oversight. A structured commercial model reflects how teams are
+                actually launched, run, and scaled in practice.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="compare-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="compare-h">
+                  What clients should compare <em>against.</em>
+                </h2>
+              </div>
+            </div>
+            <div style={{ maxWidth: "640px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                The real comparison is not raw payroll cost. The real comparison
+                is the cost, delay, and execution risk of trying to build and
+                manage the full operating layer alone. Senatio&apos;s value is in
+                reducing that burden while making the engineering team more
+                dependable from the start.
               </p>
             </div>
             <div style={{ marginTop: "24px" }} data-reveal>

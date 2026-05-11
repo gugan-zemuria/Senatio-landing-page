@@ -9,9 +9,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "How It Works — Build, Operate, Scale | Senatio",
+  title: "How to Build and Scale an Engineering Team from India | Senatio",
   description:
-    "Senatio helps global companies launch engineering teams from India, run them with operator-led discipline, and scale them without losing control.",
+    "Learn how Senatio helps global companies build, operate, and scale engineering teams from India through faster hiring, stronger operating structure, and reliable execution support.",
 };
 
 const BtnArrow = () => (
@@ -116,6 +116,27 @@ export default function HowItWorksPage() {
                   </p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="why-works-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="why-works-h">
+                  Why this model <em>works.</em>
+                </h2>
+              </div>
+            </div>
+            <div style={{ maxWidth: "620px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                The Build, Operate, Scale model works because it matches how
+                engineering teams actually succeed in practice. Clients do not
+                only need access to engineers in India. They need a structured
+                way to launch, run, and grow engineering capability from India
+                without losing time, quality, or control.
+              </p>
             </div>
           </div>
         </section>

@@ -36,8 +36,12 @@ const faqs = [
     a: "Pricing is structured around a setup phase, all-inclusive monthly managed pricing, and added oversight support for larger teams where needed.",
   },
   {
-    q: "What makes Senatio different from recruiting firms?",
-    a: "Recruiting firms help fill roles. Senatio helps build, operate, and scale engineering teams with the structure needed to make those teams work well over time.",
+    q: "What makes Senatio different from a recruiting firm?",
+    a: "Recruiting firms help fill roles. Senatio helps clients build, operate, and scale engineering teams from India with the structure needed to make those teams work well over time.",
+  },
+  {
+    q: "What makes Senatio different from a body-shop model?",
+    a: "The focus is not on renting seats. The focus is on managed engineering capability, execution quality, operating support, and cleaner long-term scaling.",
   },
 ];
 

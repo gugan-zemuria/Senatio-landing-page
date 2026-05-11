@@ -7,10 +7,11 @@ const stages = [
     num: "01",
     tag: "Build",
     verb: "Build",
-    desc: "Hire and onboard engineers in 2 weeks or less. Define the right team structure, align roles to goals, and get your India team launched fast.",
+    desc: "Hire and onboard engineers in 2 weeks or less where feasible. Define the right team structure, seniority mix, and role sequence so the team starts in the right shape from the beginning.",
     items: [
       "Define the right team structure",
       "Map roles to current engineering priorities",
+      "Decide the right seniority mix",
       "Hire quickly without compromising fit",
       "Onboard and align the team to tools, workflows, and goals",
     ],
@@ -33,7 +34,7 @@ const stages = [
     num: "03",
     tag: "Scale",
     verb: "Scale",
-    desc: "Add engineers quickly, reduce team size cleanly when needed, and grow with more control over time.",
+    desc: "Add engineers quickly, adjust team size cleanly, and grow with more confidence as priorities change over time.",
     items: [
       "Add engineers quickly",
       "Reduce team size cleanly",

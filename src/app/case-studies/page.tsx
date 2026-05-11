@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Speed & Execution | Senatio",
+  title: "Engineering Team Case Studies and Delivery Outcomes | Senatio",
   description:
-    "Senatio case studies show how global companies launch engineering teams from India faster, operate with discipline, and scale without losing control.",
+    "See how Senatio helps companies launch engineering teams from India faster, improve delivery execution, and scale with more structure and control.",
 };
 
 const BtnArrow = () => (
@@ -34,6 +34,15 @@ const whatWeSolve = [
   "Need to reduce delivery friction after launch",
   "Need stronger visibility and operating rhythm",
   "Need to scale without operational chaos",
+  "Need more dependable engineering support from India",
+];
+
+const outcomeThemes = [
+  "Faster launch timelines",
+  "Stronger delivery consistency",
+  "Better reporting and visibility",
+  "Cleaner scaling decisions",
+  "Reduced management burden on the client side",
 ];
 
 export default function CaseStudiesPage() {
@@ -94,6 +103,86 @@ export default function CaseStudiesPage() {
               }}
             >
               {whatWeSolve.map((item, i) => (
+                <article
+                  key={item}
+                  style={{
+                    borderTop: "1px solid var(--accent)",
+                    paddingTop: "14px",
+                  }}
+                  data-reveal
+                >
+                  <p className="mono" style={{ marginBottom: "6px" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
+                    {item}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="template-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="template-h">
+                  Suggested case study <em>structure.</em>
+                </h2>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                gap: "16px",
+              }}
+            >
+              {[
+                "Client context",
+                "What was breaking or missing",
+                "Team design or workflow solution",
+                "How Senatio executed",
+                "What improved after launch",
+              ].map((item, i) => (
+                <article
+                  key={item}
+                  style={{
+                    borderTop: "1px solid var(--accent)",
+                    paddingTop: "14px",
+                  }}
+                  data-reveal
+                >
+                  <p className="mono" style={{ marginBottom: "6px" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
+                    {item}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="outcomes-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="outcomes-h">
+                  Outcome themes to <em>emphasize.</em>
+                </h2>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gap: "16px",
+              }}
+            >
+              {outcomeThemes.map((item, i) => (
                 <article
                   key={item}
                   style={{

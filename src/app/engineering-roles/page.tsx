@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Engineering Roles — Team Design | Senatio",
+  title: "Engineering Roles and Team Design from India | Senatio",
   description:
-    "Senatio builds engineering teams across seniority levels and functions. From junior engineers to tech leads, frontend to data engineering.",
+    "Explore the engineering roles Senatio helps global companies build from India, including frontend, backend, full-stack, QA, DevOps, data, AI, and technical leadership roles.",
 };
 
 const BtnArrow = () => (
@@ -78,12 +78,19 @@ export default function EngineeringRolesPage() {
                 <h2 className="section-title" id="think-h">
                   Think in teams, not <em>isolated hires.</em>
                 </h2>
-                <p className="section-lede" style={{ maxWidth: "62ch" }}>
-                  The strongest engineering teams are designed with role mix,
-                  seniority balance, and delivery rhythm in mind. Some companies
-                  need a lean, cost-efficient execution layer. Others need deeper
-                  senior capability from the beginning. Senatio helps clients
-                  design that mix before hiring starts.
+                <p className="section-lede" style={{ maxWidth: "68ch" }}>
+                  One of the biggest mistakes companies make when building
+                  engineering teams in India is thinking only in terms of single
+                  positions. A stronger approach is to think about the team as a
+                  system. The right mix of roles often matters more than any one
+                  hire.
+                </p>
+                <p className="section-lede" style={{ maxWidth: "68ch" }}>
+                  Some teams need a lean build with strong full-stack execution.
+                  Others need more backend depth, stronger QA discipline, or a
+                  more senior technical layer from the beginning. Senatio helps
+                  clients think through that mix before hiring starts, so the
+                  team is designed with real delivery needs in mind.
                 </p>
               </div>
             </div>
@@ -92,7 +99,33 @@ export default function EngineeringRolesPage() {
 
         <Roles />
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="shapes-h">
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="mix-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="mix-h">
+                  How to think about <em>team mix.</em>
+                </h2>
+              </div>
+            </div>
+            <div style={{ maxWidth: "640px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                The best team design depends on what the company is trying to
+                accomplish. A startup looking to move fast on product might need
+                a compact full-stack team. A growth-stage company may need more
+                defined frontend, backend, QA, and DevOps support. A company
+                modernizing internal systems may need stronger backend, DevOps,
+                and data capability.
+              </p>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                Senatio helps clients map team shape to business reality, not to
+                abstract org charts.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="shapes-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
@@ -139,6 +172,26 @@ export default function EngineeringRolesPage() {
                   </p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="planning-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="planning-h">
+                  Why role planning <em>matters.</em>
+                </h2>
+              </div>
+            </div>
+            <div style={{ maxWidth: "620px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                A well-designed team launches faster, performs better, and
+                becomes easier to scale. Better role planning also makes pricing
+                more sensible, hiring more targeted, and delivery expectations
+                more realistic.
+              </p>
             </div>
           </div>
         </section>

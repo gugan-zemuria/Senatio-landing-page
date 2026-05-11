@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "FAQ — Senatio | Managed Engineering Capability",
+  title: "FAQ on Building Engineering Teams from India | Senatio",
   description:
-    "Frequently asked questions about Senatio's model, pricing, team structure, and how we differ from outsourcing and staff augmentation.",
+    "Answers to common questions about building engineering teams from India, managed execution, team pricing, workflow improvement, and scaling with Senatio.",
 };
 
 export default function FaqPage() {

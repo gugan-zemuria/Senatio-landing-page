@@ -24,6 +24,7 @@ const rows = [
   { num: "005", name: "Reporting and visibility", desc: "Visibility into team performance, throughput, and operating health." },
   { num: "006", name: "Continuity and replacement support", desc: "Continuity so the team holds together as people and priorities shift." },
   { num: "007", name: "Scaling flexibility", desc: "Easy scale up or scale down without disrupting operating quality." },
+  { num: "008", name: "Operational structure", desc: "Operating layer around the team that keeps execution stable and manageable." },
 ];
 
 export default function Ledger() {
@@ -36,9 +37,9 @@ export default function Ledger() {
               What clients are <em>actually getting.</em>
             </h2>
             <p className="section-lede">
-              When clients work with Senatio, they are not paying for raw
-              headcount. They are paying for managed engineering capability
-              that is designed to launch fast, run reliably, and scale cleanly.
+              When clients work with Senatio, they are not paying for raw payroll
+              cost or a simple hiring service. They are paying for managed
+              engineering capability from India.
             </p>
           </div>
         </div>

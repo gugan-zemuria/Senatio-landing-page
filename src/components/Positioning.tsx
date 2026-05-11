@@ -10,21 +10,24 @@ export default function Positioning() {
 
           <div className="positioning-body" data-reveal data-delay="2">
             <p>
-              Hiring engineers is only the first step. The harder part is
-              building a team that runs well, delivers consistently, and scales
-              cleanly over time. Senatio helps global companies do exactly that
-              from India.
+              Many companies want to build an engineering team in India because
+              the market offers strong talent, long-term scale, and better
+              operating leverage. But hiring engineers is only the first step.
+              The real challenge is building an India engineering team that
+              actually runs well, delivers consistently, and stays manageable as
+              it grows.
             </p>
             <p>
-              We do not just help you hire engineers. We help define the team
+              Senatio helps global companies do exactly that. We do not just help
+              clients hire engineers in India. We help define the right team
               structure, launch the team quickly, support onboarding, create
-              operating discipline, and keep execution on track as the team
-              grows.
+              operating discipline, and keep delivery on track over time.
             </p>
             <p>
-                Where useful, we also help improve the workflows around the team
-                so delivery stays clearer, faster, and easier to manage.
-              </p>
+              The result is not just extra headcount. It is a managed engineering
+              capability from India that can launch fast, perform reliably, and
+              scale with more control.
+            </p>
           </div>
         </div>
       </div>
