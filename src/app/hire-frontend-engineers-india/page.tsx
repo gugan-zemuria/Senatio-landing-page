@@ -28,20 +28,26 @@ const BtnArrow = () => (
   </svg>
 );
 
-const helps = [
-  "Define the right frontend role for your product stage",
-  "Hire frontend engineers in India with the right balance of speed and fit",
-  "Support onboarding into product workflows and design systems",
-  "Improve coordination between frontend and the broader engineering team",
-  "Build a frontend team that can scale cleanly over time",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const helps: CardItem[] = [
+  { num: "01", title: "Define the right frontend role", desc: "Role definition aligned to your product stage and execution needs." },
+  { num: "02", title: "Hire with speed and fit", desc: "Hire frontend engineers in India with the right balance of speed and fit." },
+  { num: "03", title: "Onboarding into workflows", desc: "Engineers onboarded into product workflows and design systems." },
+  { num: "04", title: "Improve coordination", desc: "Better coordination between frontend and the broader engineering team." },
+  { num: "05", title: "Scalable frontend team", desc: "Build a frontend team that can scale cleanly over time." },
 ];
 
-const whereHelps = [
-  "Product interfaces",
-  "Customer-facing applications",
-  "Frontend modernization",
-  "Faster feature delivery",
-  "Improved coordination with backend and product teams",
+const whereHelps: CardItem[] = [
+  { num: "01", title: "Product interfaces", desc: "High-quality product interfaces that improve user experience." },
+  { num: "02", title: "Customer-facing applications", desc: "Customer-facing applications built for speed and reliability." },
+  { num: "03", title: "Frontend modernization", desc: "Modernizing legacy frontend codebases with cleaner architecture." },
+  { num: "04", title: "Faster feature delivery", desc: "Faster feature delivery through strong frontend execution." },
+  { num: "05", title: "Improved coordination", desc: "Improved coordination with backend and product teams." },
 ];
 
 export default function FrontendPage() {
@@ -109,20 +115,28 @@ export default function FrontendPage() {
                 gap: "16px",
               }}
             >
-              {helps.map((item, i) => (
+              {helps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -142,24 +156,32 @@ export default function FrontendPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {whereHelps.map((item, i) => (
+              {whereHelps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

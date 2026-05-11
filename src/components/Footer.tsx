@@ -61,6 +61,26 @@ export default function Footer() {
             </ul>
           </div>
           <div className="foot-col">
+            <h5>Services</h5>
+            <ul>
+              <li>
+                <Link href="/offshore-engineering-team-india">Offshore Engineering Teams</Link>
+              </li>
+              <li>
+                <Link href="/remote-engineering-team-india">Remote Engineering Teams</Link>
+              </li>
+              <li>
+                <Link href="/managed-engineering-teams">Managed Engineering Teams</Link>
+              </li>
+              <li>
+                <Link href="/engineering-team-scaling">Engineering Team Scaling</Link>
+              </li>
+              <li>
+                <Link href="/engineering-workflow-automation">Engineering Workflow Automation</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="foot-col">
             <h5>Locations</h5>
             <ul>
               <li>Bengaluru · IND</li>

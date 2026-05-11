@@ -28,12 +28,18 @@ const BtnArrow = () => (
   </svg>
 );
 
-const scaleSupports = [
-  "Add capacity quickly",
-  "Keep reporting and visibility clearer",
-  "Reduce disruption during growth",
-  "Support continuity and replacement",
-  "Maintain operating discipline over time",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const scaleSupports: CardItem[] = [
+  { num: "01", title: "Add capacity quickly", desc: "Scale your team up fast without losing quality or control." },
+  { num: "02", title: "Keep reporting and visibility clearer", desc: "Maintain clear visibility into delivery as the team grows." },
+  { num: "03", title: "Reduce disruption during growth", desc: "Minimize operational friction when adding new engineers." },
+  { num: "04", title: "Support continuity and replacement", desc: "Team stays dependable even as composition changes." },
+  { num: "05", title: "Maintain operating discipline", desc: "Preserve execution quality and operating standards at scale." },
 ];
 
 export default function ScalingPage() {
@@ -107,25 +113,33 @@ export default function ScalingPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
                 paddingTop: "24px",
               }}
             >
-              {scaleSupports.map((item, i) => (
+              {scaleSupports.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

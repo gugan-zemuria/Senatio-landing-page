@@ -28,20 +28,26 @@ const BtnArrow = () => (
   </svg>
 );
 
-const helps = [
-  "Defining the right backend role profile",
-  "Hiring backend engineers in India faster",
-  "Matching backend hiring to product and platform needs",
-  "Onboarding engineers into your workflows and tooling",
-  "Supporting long-term team growth and continuity",
+interface CardItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const helps: CardItem[] = [
+  { num: "01", title: "Defining the right role profile", desc: "Role definition aligned to your product, platform, and growth needs." },
+  { num: "02", title: "Faster backend hiring", desc: "Hiring backend engineers in India with speed and quality." },
+  { num: "03", title: "Matching hiring to needs", desc: "Backend hiring matched to product requirements and platform goals." },
+  { num: "04", title: "Onboarding into workflows", desc: "Engineers onboarded into your tooling, workflows, and codebase." },
+  { num: "05", title: "Long-term growth and continuity", desc: "Team stays strong and dependable as it grows over time." },
 ];
 
-const useCases = [
-  "API development",
-  "Platform engineering",
-  "Business logic and services",
-  "Integrations and internal systems",
-  "Scalable backend foundations for product growth",
+const useCases: CardItem[] = [
+  { num: "01", title: "API development", desc: "Building and maintaining APIs that power your product." },
+  { num: "02", title: "Platform engineering", desc: "Platform services and infrastructure that support engineering scale." },
+  { num: "03", title: "Business logic and services", desc: "Core business logic and backend services for your application." },
+  { num: "04", title: "Integrations and internal systems", desc: "Integrations with third-party services and internal tooling." },
+  { num: "05", title: "Scalable foundations", desc: "Scalable backend foundations that support long-term product growth." },
 ];
 
 export default function BackendPage() {
@@ -106,23 +112,31 @@ export default function BackendPage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "16px",
+                gap: "20px",
               }}
             >
-              {helps.map((item, i) => (
+              {helps.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -142,24 +156,32 @@ export default function BackendPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {useCases.map((item, i) => (
+              {useCases.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}

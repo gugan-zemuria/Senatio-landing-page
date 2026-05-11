@@ -28,14 +28,20 @@ const BtnArrow = () => (
   </svg>
 );
 
-const includedItems = [
-  "Sourcing and hiring",
-  "Onboarding and team alignment",
-  "Delivery oversight",
-  "Reporting and visibility",
-  "Continuity and replacement support",
-  "Scaling flexibility",
-  "Operational discipline around the team",
+interface IncludedItem {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+const includedItems: IncludedItem[] = [
+  { num: "01", title: "Sourcing and hiring", desc: "Pipeline creation and hiring decisions tuned to your team design." },
+  { num: "02", title: "Onboarding and team alignment", desc: "Tools, workflows, and ramp support so engineers contribute from day one." },
+  { num: "03", title: "Delivery oversight", desc: "Operating cadence and execution oversight that keeps work on track." },
+  { num: "04", title: "Reporting and visibility", desc: "Visibility into team performance, throughput, and operating health." },
+  { num: "05", title: "Continuity and replacement support", desc: "Continuity so the team holds together as people and priorities shift." },
+  { num: "06", title: "Scaling flexibility", desc: "Easy scale up or scale down without disrupting operating quality." },
+  { num: "07", title: "Operational discipline", desc: "Operating layer around the team that keeps execution stable and manageable." },
 ];
 
 export default function ManagedEngineeringPage() {
@@ -91,36 +97,47 @@ export default function ManagedEngineeringPage() {
           </div>
         </section>
 
-        <section className="section" aria-labelledby="lp3-included-h">
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="lp3-included-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="lp3-included-h">
                   What is <em>included.</em>
                 </h2>
+                <p className="section-lede">
+                  Every managed team comes with these capabilities built into the model, not added as extras.
+                </p>
               </div>
             </div>
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
-              {includedItems.map((item, i) => (
+              {includedItems.map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
@@ -160,29 +177,37 @@ export default function ManagedEngineeringPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
               }}
             >
               {[
-                "Companies building long-term product capacity",
-                "Teams that want more visibility and control",
-                "Companies that do not want to build the full operating layer alone",
-                "Founders who want speed without losing discipline",
-              ].map((item, i) => (
+                { num: "01", title: "Product builders", desc: "Companies building long-term product capacity that needs to hold and grow over time." },
+                { num: "02", title: "Visibility-first teams", desc: "Teams that want more visibility and control over their engineering operation." },
+                { num: "03", title: "Lean operators", desc: "Companies that do not want to build the full operating layer alone from scratch." },
+                { num: "04", title: "Speed-focused founders", desc: "Founders who want speed without losing operational discipline." },
+              ].map((item) => (
                 <article
-                  key={item}
+                  key={item.title}
                   style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                   data-reveal
                 >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
+                  <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>
+                    {item.num}
+                  </span>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "var(--fg-2)", fontSize: "0.925rem", lineHeight: 1.55, margin: 0 }}>
+                    {item.desc}
                   </p>
                 </article>
               ))}
