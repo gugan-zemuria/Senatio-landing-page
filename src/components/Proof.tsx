@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BtnArrow = () => (
   <svg
     className="btn-arrow"
@@ -83,10 +85,10 @@ export default function Proof() {
           <p className="mono" style={{ margin: 0 }}>
             Detailed case studies forthcoming · Available on request
           </p>
-          <a href="#contact" className="btn">
+          <Link href="/contact" className="btn">
             <span>See case studies</span>
             <BtnArrow />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

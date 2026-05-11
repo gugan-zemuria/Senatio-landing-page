@@ -14,15 +14,17 @@ const BtnArrow = () => (
   </svg>
 );
 
+import Link from "next/link";
+
 const rows = [
-  { num: "001", name: "Sourcing & hiring", desc: "Pipeline creation and hiring decisions tuned to your team design." },
+  { num: "001", name: "Sourcing and hiring", desc: "Pipeline creation and hiring decisions tuned to your team design." },
   { num: "002", name: "Onboarding", desc: "Tools, workflows, and ramp support so engineers contribute from day one." },
-  { num: "003", name: "Payroll & compliance", desc: "Local employment, payroll, and statutory compliance handled end-to-end." },
+  { num: "003", name: "Payroll and compliance", desc: "Local employment, payroll, and statutory compliance handled end-to-end." },
   { num: "004", name: "Delivery oversight", desc: "Operating cadence and execution oversight that keeps work on track." },
-  { num: "005", name: "Reporting & visibility", desc: "Visibility into team performance, throughput, and operating health." },
-  { num: "006", name: "Replacement & continuity", desc: "Continuity support so the team holds together as people and priorities shift." },
-  { num: "007", name: "Quality control", desc: "Standards, reviews, and execution discipline maintained across the team." },
-  { num: "008", name: "Scaling flexibility", desc: "Easy scale up or scale down without disrupting operating quality." },
+  { num: "005", name: "Reporting and visibility", desc: "Visibility into team performance, throughput, and operating health." },
+  { num: "006", name: "Continuity and replacement support", desc: "Continuity so the team holds together as people and priorities shift." },
+  { num: "007", name: "Scaling flexibility", desc: "Easy scale up or scale down without disrupting operating quality." },
+  { num: "008", name: "Operational structure", desc: "Operating layer around the team that keeps execution stable and manageable." },
 ];
 
 export default function Ledger() {
@@ -32,14 +34,12 @@ export default function Ledger() {
         <div className="section-head">
           <div data-reveal data-delay="1">
             <h2 className="section-title" id="ledger-h">
-              What you are <em>actually getting.</em>
+              What clients are <em>actually getting.</em>
             </h2>
             <p className="section-lede">
-              When you work with Senatio, you are not paying for raw headcount.
-              You are paying for a managed engineering capability that is
-              structured to launch fast, run reliably, and scale cleanly. That
-              includes the work required to source, hire, onboard, support, and
-              maintain a stable engineering team over time.
+              When clients work with Senatio, they are not paying for raw payroll
+              cost or a simple hiring service. They are paying for managed
+              engineering capability from India.
             </p>
           </div>
         </div>
@@ -68,10 +68,10 @@ export default function Ledger() {
               The value is not just access to engineers. The value is making the
               engineering team <em>actually work well.</em>
             </p>
-            <a href="#contact" className="btn">
+            <Link href="/contact" className="btn">
               <span>Discuss your team design</span>
               <BtnArrow />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

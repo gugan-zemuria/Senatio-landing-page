@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BtnArrow = () => (
   <svg
     className="btn-arrow"
@@ -108,8 +110,17 @@ const functionRoles = [
     ),
   },
   {
-    name: "Data & AI engineers",
-    desc: "Data systems, pipelines, model operations, and applied AI support.",
+    name: "Data engineers",
+    desc: "Pipelines, data systems, internal analytics support, and structured data movement.",
+    icon: (
+      <svg className="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" aria-hidden="true">
+        <path d="M3 3v18h18M7 14l4-4 4 4 5-7" />
+      </svg>
+    ),
+  },
+  {
+    name: "AI engineers",
+    desc: "Applied AI features, workflow support, model operations, and AI-enabled internal tools where relevant.",
     icon: (
       <svg className="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" aria-hidden="true">
         <path d="M3 3v18h18M7 14l4-4 4 4 5-7" />
@@ -187,10 +198,10 @@ export default function Roles() {
           <p className="pull">
             We help clients build teams, <em>not just fill seats.</em>
           </p>
-          <a href="#contact" className="btn">
+          <Link href="/contact" className="btn">
             <span>Talk to us about your ideal team structure</span>
             <BtnArrow />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

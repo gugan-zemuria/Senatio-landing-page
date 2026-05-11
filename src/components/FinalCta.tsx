@@ -40,7 +40,7 @@ export default function FinalCta() {
               <BtnArrow />
             </a>
             <span className="small">
-              Launch fast · Operate with discipline · Scale with confidence
+              Launch fast &middot; Operate with discipline &middot; Scale with confidence
             </span>
           </div>
         </div>

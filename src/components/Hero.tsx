@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const BtnArrow = () => (
@@ -58,27 +59,27 @@ export default function Hero() {
 
             <p className="hero-sub">
               Senatio helps global companies launch high-performance engineering
-              teams in weeks, manage execution with discipline, and scale
-              without losing control.
+              teams from India in weeks, run them with operator-led discipline,
+              and scale without losing control.
             </p>
 
             <div className="hero-ctas">
-              <a href="#contact" className="btn btn-primary">
+              <Link href="/contact" className="btn btn-primary">
                 <span>Book a call</span>
                 <BtnArrow />
-              </a>
-              <a href="#how-it-works" className="btn">
+              </Link>
+              <Link href="/how-it-works" className="btn">
                 <span>See how it works</span>
                 <BtnArrow />
-              </a>
+              </Link>
             </div>
 
             <div className="hero-support">
               <span>Launch in 2 weeks or less</span>
               <span className="dot" />
-              <span>Scale up or down easily</span>
-              <span className="dot" />
               <span>Managed execution from day one</span>
+              <span className="dot" />
+              <span>Scale with more confidence</span>
             </div>
           </div>
 

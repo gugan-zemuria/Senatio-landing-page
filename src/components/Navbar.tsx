@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const BtnArrow = () => (
@@ -20,40 +21,43 @@ export default function Navbar() {
   return (
     <nav className="nav" aria-label="Primary">
       <div className="nav-inner">
-        <a href="#home" className="brand" aria-label="Senatio home">
-          <span className="brand-mark" aria-hidden="true" />
-          Senatio
+        <Link href="/" className="brand" aria-label="Senatio home">
+          <img src="/senatio_dark_logo.svg" alt="Senatio" className="brand-logo logo-dark" />
+          <img src="/senatio_light_logo.svg" alt="Senatio" className="brand-logo logo-light" />
           <span className="brand-suffix">Build · Operate · Scale</span>
-        </a>
+        </Link>
         <ul className="nav-links">
           <li>
-            <a href="#how-it-works">How It Works</a>
+            <Link href="/how-it-works">How It Works</Link>
           </li>
           <li>
-            <a href="#roles">Engineering Roles</a>
+            <Link href="/engineering-roles">Engineering Roles</Link>
           </li>
           <li>
-            <a href="#pricing">Pricing</a>
+            <Link href="/execution-improvement">Execution Improvement</Link>
           </li>
           <li>
-            <a href="#cases">Case Studies</a>
+            <Link href="/pricing">Pricing</Link>
           </li>
           <li>
-            <a href="#faq">FAQ</a>
+            <Link href="/case-studies">Case Studies</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link href="/faq">FAQ</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
         <div className="nav-actions">
           <ThemeToggle />
-          <a href="#contact" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             <span>Book a call</span>
             <BtnArrow />
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

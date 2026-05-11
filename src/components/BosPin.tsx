@@ -7,36 +7,39 @@ const stages = [
     num: "01",
     tag: "Build",
     verb: "Build",
-    desc: "Hire and onboard engineers in 2 weeks or less. Define the right team structure, align roles to goals, and get your India team launched fast — with seniority mix and starting structure shaped intelligently from day one.",
+    desc: "Hire and onboard engineers in 2 weeks or less where feasible. Define the right team structure, seniority mix, and role sequence so the team starts in the right shape from the beginning.",
     items: [
       "Define the right team structure",
       "Map roles to current engineering priorities",
-      "Hire engineers in 2 weeks or less",
-      "Onboard and align to tools, workflows, goals",
+      "Decide the right seniority mix",
+      "Hire quickly without compromising fit",
+      "Onboard and align the team to tools, workflows, and goals",
     ],
   },
   {
     num: "02",
     tag: "Operate",
     verb: "Operate",
-    desc: "Run the team with delivery rhythm, reporting, continuity, and execution oversight. Prevent the team from becoming another management problem on the client side.",
+    desc: "Run the team with reporting, continuity, oversight, and delivery discipline so execution stays on track.",
     items: [
       "Delivery rhythm",
-      "Reporting & visibility",
+      "Reporting and visibility",
       "Continuity support",
+      "Replacement handling",
       "Execution oversight",
+      "Workflow improvement where useful",
     ],
   },
   {
     num: "03",
     tag: "Scale",
     verb: "Scale",
-    desc: "Add engineers quickly, reduce team size cleanly when needed, and grow with more control and less operational friction. Quality stays stable while team shape changes over time.",
+    desc: "Add engineers quickly, adjust team size cleanly, and grow with more confidence as priorities change over time.",
     items: [
-      "Scale up cleanly",
-      "Reduce without churn",
-      "Maintain quality",
-      "Hold operating shape",
+      "Add engineers quickly",
+      "Reduce team size cleanly",
+      "Maintain quality while growing",
+      "Keep operating discipline stable as the team evolves",
     ],
   },
 ];
@@ -112,7 +115,7 @@ export default function BosPin() {
       });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-      const COUNT = 2400;
+      const COUNT = 2744;
 
       // State 0 — Scattered cloud (Build)
       const stateBuild = new Float32Array(COUNT * 3);

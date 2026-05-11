@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BtnArrow = () => (
   <svg
     className="btn-arrow"
@@ -126,10 +128,10 @@ export default function Pricing() {
               Clients are paying for a team that can launch faster, run better,
               and scale more cleanly than they would likely manage alone.
             </p>
-            <a href="#contact" className="btn" style={{ marginTop: "12px" }}>
+            <Link href="/contact" className="btn" style={{ marginTop: "12px" }}>
               <span>Discuss team design and pricing</span>
               <BtnArrow />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

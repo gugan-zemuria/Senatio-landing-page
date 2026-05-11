@@ -41,8 +41,9 @@ export default function Loader() {
           <span>Senatio · Operator&apos;s Broadsheet</span>
           <span className="accent">Starting Sequence</span>
         </div>
-        <div className="loader-mark">
-          Senatio<span className="accent">.</span>
+        <div className="loader-mark" style={{ display: "flex" }}>
+          <img src="/senatio_dark_logo.svg" alt="Senatio" className="brand-logo logo-dark" style={{ height: "clamp(3rem, 8vw, 6rem)" }} />
+          <img src="/senatio_light_logo.svg" alt="Senatio" className="brand-logo logo-light" style={{ height: "clamp(3rem, 8vw, 6rem)" }} />
         </div>
         <div className="loader-stream" ref={streamRef}>
           <div className="line">

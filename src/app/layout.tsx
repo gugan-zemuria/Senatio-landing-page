@@ -22,9 +22,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Senatio — Build, operate, and scale your engineering team from India",
+  title: "Build, Operate, and Scale Engineering Teams from India | Senatio",
   description:
-    "Senatio helps global companies launch high-performance engineering teams from India, run them with operator-led discipline, and scale them without losing control.",
+    "Senatio helps global companies build, operate, and scale engineering teams from India with managed execution, faster launch timelines, stronger delivery discipline, and better long-term control.",
 };
 
 export default function RootLayout({

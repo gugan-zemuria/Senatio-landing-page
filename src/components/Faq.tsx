@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 const faqs = [
   {
     q: "Is this outsourcing?",
-    a: "No. Senatio is built around managed engineering capability from India. The model gives clients a stronger operating structure, more continuity, and more control than a traditional outsourcing relationship.",
+    a: "No. Senatio is built around managed engineering capability from India. The model is designed to give clients stronger operating structure, more continuity, and more control than a traditional outsourcing relationship.",
   },
   {
     q: "Is this staff augmentation?",
@@ -16,12 +16,16 @@ const faqs = [
     a: "No. Hiring is only one part of the model. Senatio also helps with team setup, onboarding, operating discipline, continuity, and scale.",
   },
   {
+    q: "Do you help improve workflows too?",
+    a: "Yes, where workflow bottlenecks are hurting execution. Senatio can help improve coordination, visibility, reporting, and practical automation around engineering delivery.",
+  },
+  {
     q: "How quickly can a team be launched?",
-    a: "In many cases, teams launch in 2 weeks or less, depending on role requirements, hiring complexity, and team structure.",
+    a: "In many cases, teams can be launched in 2 weeks or less, depending on the roles, hiring complexity, and team shape required.",
   },
   {
     q: "Can we start small?",
-    a: "Yes. Most engagements should ideally start with at least a 2-engineer team, but smaller pilot structures can be discussed where appropriate.",
+    a: "Yes. In most cases, a 2-engineer team is the stronger starting point, but smaller pilot structures can still be discussed where appropriate.",
   },
   {
     q: "Can we scale later?",
@@ -29,15 +33,15 @@ const faqs = [
   },
   {
     q: "How is pricing structured?",
-    a: "Pricing is structured around a setup phase, all-inclusive monthly per-engineer pricing, and added oversight support for larger teams where needed.",
+    a: "Pricing is structured around a setup phase, all-inclusive monthly managed pricing, and added oversight support for larger teams where needed.",
   },
   {
-    q: "Do you manage execution too?",
-    a: "Yes. Senatio creates operating discipline around the team through reporting, continuity support, and execution oversight.",
+    q: "What makes Senatio different from a recruiting firm?",
+    a: "Recruiting firms help fill roles. Senatio helps clients build, operate, and scale engineering teams from India with the structure needed to make those teams work well over time.",
   },
   {
-    q: "What makes Senatio different from recruiting firms?",
-    a: "Recruiting firms help fill roles. Senatio helps build, operate, and scale engineering teams with the structure needed to make those teams work well over time.",
+    q: "What makes Senatio different from a body-shop model?",
+    a: "The focus is not on renting seats. The focus is on managed engineering capability, execution quality, operating support, and cleaner long-term scaling.",
   },
 ];
 
