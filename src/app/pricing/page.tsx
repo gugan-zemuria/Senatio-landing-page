@@ -43,6 +43,7 @@ export default function PricingPage() {
       <Grain />
       <Navbar />
       <main>
+        {/* ── Hero ── */}
         <section className="section" aria-labelledby="pricing-hero-h">
           <div className="wrap">
             <div className="section-head">
@@ -65,150 +66,183 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="setup-h">
+        {/* ── Three pricing phases — card grid ── */}
+        <section
+          className="section pricing"
+          style={{ background: "var(--bg-2)" }}
+          aria-labelledby="phases-h"
+        >
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
-                <h2 className="section-title" id="setup-h">
+                <h2 className="section-title" id="phases-h">
+                  Three phases, <em>one model.</em>
+                </h2>
+                <p className="section-lede">
+                  Every engagement follows the same transparent structure — setup,
+                  monthly managed pricing, and oversight as the team scales.
+                </p>
+              </div>
+            </div>
+
+            <div className="pricing-grid">
+              <article className="price" data-reveal>
+                <div className="price-head">
+                  <span>Phase</span>
+                  <span className="num">01</span>
+                </div>
+                <h3 className="price-title">
                   One-time <em>setup fee</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "600px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The setup fee covers the work required to launch the team
-                properly. That includes sourcing, hiring, onboarding, and initial
-                team setup. Launching a team has real operational value, so it
-                should be treated as a meaningful phase rather than invisible
-                overhead.
-              </p>
-            </div>
-          </div>
-        </section>
+                </h3>
+                <p className="price-desc">
+                  Covers the work required to launch the team properly. Launch has
+                  real value and real execution behind it — treated as a
+                  meaningful phase, not invisible overhead.
+                </p>
+                <ul className="price-list">
+                  <li>Sourcing</li>
+                  <li>Hiring</li>
+                  <li>Onboarding</li>
+                  <li>Initial team setup</li>
+                </ul>
+              </article>
 
-        <section className="section" aria-labelledby="monthly-h">
-          <div className="wrap">
-            <div className="section-head">
+              <article className="price" data-reveal data-delay="1">
+                <div className="price-head">
+                  <span>Phase</span>
+                  <span className="num">02</span>
+                </div>
+                <h3 className="price-title">
+                  Monthly <em>per-engineer</em>
+                </h3>
+                <p className="price-desc">
+                  All-inclusive. Reflects managed capability, not salary
+                  pass-through — covering hiring support, operations, continuity,
+                  delivery, and scaling flexibility.
+                </p>
+                <ul className="price-list">
+                  <li>Hiring support</li>
+                  <li>Operations support</li>
+                  <li>Continuity &amp; replacement</li>
+                  <li>Delivery support</li>
+                  <li>Scale flexibility</li>
+                </ul>
+              </article>
+
+              <article className="price" data-reveal data-delay="2">
+                <div className="price-head">
+                  <span>Phase</span>
+                  <span className="num">03</span>
+                </div>
+                <h3 className="price-title">
+                  Shared <em>oversight</em>
+                </h3>
+                <p className="price-desc">
+                  As teams grow, an added layer of delivery or program support
+                  keeps execution stable. Positioned as a shared operating layer,
+                  not duplicated headcount.
+                </p>
+                <ul className="price-list">
+                  <li>Delivery lead</li>
+                  <li>Engineering manager</li>
+                  <li>Program oversight</li>
+                </ul>
+              </article>
+            </div>
+
+            <div className="pricing-meta">
+              <div data-reveal>
+                <h4>Recommended starting point</h4>
+                <p>
+                  Most engagements begin with at least a 2-engineer team. A
+                  single-engineer engagement is possible but treated as a premium
+                  pilot or entry case.
+                </p>
+                <p>
+                  A 2-engineer minimum supports the managed-team story properly
+                  and makes the operating model meaningful from day one.
+                </p>
+              </div>
               <div data-reveal data-delay="1">
-                <h2 className="section-title" id="monthly-h">
-                  All-inclusive monthly <em>per-engineer pricing</em>
-                </h2>
+                <h4>What shapes pricing</h4>
+                <ul>
+                  {pricingFactors.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            <div style={{ maxWidth: "600px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Once the team is live, Senatio uses all-inclusive monthly pricing
-                per engineer. This reflects the fact that clients are paying for
-                managed capability, not just for salary pass-through.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                The monthly structure includes hiring support, operations support,
-                continuity, delivery support, and the practical operating layer
-                that helps the team work well over time.
-              </p>
             </div>
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="oversight-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="oversight-h">
-                  Oversight for <em>larger teams</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "600px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                As teams grow, they may need an added layer of delivery or program
-                support. That can include shared delivery leadership, engineering
-                management support, or broader operating oversight where required.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" aria-labelledby="factors-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="factors-h">
-                  What shapes <em>pricing</em>
-                </h2>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                gap: "16px",
-              }}
-            >
-              {pricingFactors.map((item, i) => (
-                <article
-                  key={item}
-                  style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
-                  }}
-                  data-reveal
-                >
-                  <p className="mono" style={{ marginBottom: "6px" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0 }}>
-                    {item}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="why-h">
+        {/* ── Why this model + what to compare against ── */}
+        <section className="section" aria-labelledby="why-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="why-h">
-                  Why the model is structured <em>this way</em>
+                  Why the model is structured <em>this way.</em>
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "600px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr",
+                gap: "32px",
+                maxWidth: "680px",
+              }}
+              data-reveal
+            >
+              <p
+                style={{
+                  color: "var(--fg-2)",
+                  lineHeight: 1.65,
+                  fontSize: "1.05rem",
+                  margin: 0,
+                }}
+              >
                 Engineering teams are not built from identical seats. Different
                 teams require different mixes of skill, support, structure, and
                 oversight. A structured commercial model reflects how teams are
                 actually launched, run, and scaled in practice.
               </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" aria-labelledby="compare-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="compare-h">
-                  What clients should compare <em>against.</em>
-                </h2>
+              <div
+                style={{
+                  borderTop: "1px solid var(--line)",
+                  paddingTop: "28px",
+                }}
+              >
+                <p
+                  className="mono"
+                  style={{ marginBottom: "14px", color: "var(--accent)" }}
+                >
+                  What to compare against
+                </p>
+                <p
+                  style={{
+                    color: "var(--fg-2)",
+                    lineHeight: 1.65,
+                    fontSize: "1.05rem",
+                    margin: 0,
+                  }}
+                >
+                  The real comparison is not raw payroll cost. The real comparison
+                  is the cost, delay, and execution risk of trying to build and
+                  manage the full operating layer alone. Senatio&apos;s value is
+                  in reducing that burden while making the engineering team more
+                  dependable from the start.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The real comparison is not raw payroll cost. The real comparison
-                is the cost, delay, and execution risk of trying to build and
-                manage the full operating layer alone. Senatio&apos;s value is in
-                reducing that burden while making the engineering team more
-                dependable from the start.
-              </p>
-            </div>
-            <div style={{ marginTop: "24px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
-                <span>Discuss team design and pricing</span>
-                <BtnArrow />
-              </Link>
+
+              <div>
+                <Link href="/contact" className="btn btn-primary">
+                  <span>Discuss team design and pricing</span>
+                  <BtnArrow />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
