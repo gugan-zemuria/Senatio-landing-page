@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Offshore Engineering Team in India | Senatio",
   description:
-    "Build an offshore engineering team in India with Senatio. Launch faster, improve execution, and scale with managed support, stronger visibility, and less operational friction.",
+    "Build an offshore engineering team in India with Senatio. Launch faster, improve execution, and scale with managed support and less operational friction.",
 };
 
 const BtnArrow = () => (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
@@ -18,6 +19,11 @@ const BtnArrow = () => (
   </svg>
 );
 
+const s = {
+  text: { color: "var(--fg-2)" as const, lineHeight: 1.65 as const, fontSize: "1.05rem" as const, margin: 0 as const },
+  max: { maxWidth: "640px" as const },
+};
+
 const struggles = [
   "Important process steps were still physical or manually driven",
   "Approvals and handoffs required repeated human follow-up",
@@ -36,12 +42,24 @@ const whatChanged = [
   "The business was able to handle more work with better consistency and stronger control",
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://senatio.com" },
+    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://senatio.com/case-studies" },
+    { "@type": "ListItem", position: 3, name: "Manufacturing Digital Workflows", item: "https://senatio.com/case-studies/manufacturing-digital-workflows" },
+  ],
+};
+
 export default function ManufacturingDigitalWorkflowsPage() {
   return (
     <>
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Grain />
       <Navbar />
       <main>
+        {/* ── Hero ── */}
         <section className="section" aria-labelledby="hero-h">
           <div className="wrap">
             <div className="section-head">
@@ -64,7 +82,7 @@ export default function ManufacturingDigitalWorkflowsPage() {
               data-reveal
               data-delay="1"
             >
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+              <p style={s.text}>
                 The client did not mainly have a software problem. It had a workflow reality problem. Important parts of the business were still being carried by physical process movement, spreadsheet logic, manual approvals, repeated follow-up, and people acting as the glue between broken steps. Senatio helped redesign the workflow, digitize the process, automate the repeatable parts, and turn effort-heavy operational movement into a more visible and manageable system.
               </p>
               <div style={{ padding: "20px 24px", border: "1px solid var(--line)", background: "var(--bg-2)", borderRadius: "8px", alignSelf: "start" }}>
@@ -75,28 +93,23 @@ export default function ManufacturingDigitalWorkflowsPage() {
           </div>
         </section>
 
+        {/* ── The real business problem ── */}
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="problem-h">
           <div className="wrap">
-            <div
-              style={{
-                display: "grid",
-                gap: "clamp(24px, 4vw, 64px)",
-                alignItems: "start",
-              }}
-            >
+            <div style={{ display: "grid", gap: "clamp(24px, 4vw, 64px)", alignItems: "start" }}>
               <div data-reveal>
                 <h2 className="section-title" id="problem-h">
                   The real business <em>problem.</em>
                 </h2>
               </div>
               <div data-reveal data-delay="1">
-                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                <p style={s.text}>
                   The company had scale, demand, and operational depth. But several critical workflows were still moving in a way that belonged to an earlier stage of the business.
                 </p>
-                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                <p style={{ ...s.text, marginTop: "16px" }}>
                   Approvals were spread across physical documents, spreadsheets, calls, emails, and manual updates. Status often lived inside people rather than systems. Teams could move work forward, but only by repeatedly checking, chasing, confirming, and compensating. Managers were often acting like human workflow engines, pushing information from one step to the next just to keep the operation moving.
                 </p>
-                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                <p style={{ ...s.text, marginTop: "16px", color: "var(--fg)" }}>
                   That kind of burden is dangerous in a large business because it hides in plain sight. The company looks operational. Work is moving. But too much of the movement is powered by effort instead of design.
                 </p>
               </div>
@@ -104,6 +117,7 @@ export default function ManufacturingDigitalWorkflowsPage() {
           </div>
         </section>
 
+        {/* ── What they were struggling with ── */}
         <section className="section" aria-labelledby="struggles-h">
           <div className="wrap">
             <div className="section-head">
@@ -128,29 +142,23 @@ export default function ManufacturingDigitalWorkflowsPage() {
           </div>
         </section>
 
+        {/* ── What was actually at stake ── */}
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="stake-h">
           <div className="wrap">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "clamp(24px, 4vw, 64px)",
-                alignItems: "start",
-              }}
-            >
+            <div style={{ display: "grid", gap: "clamp(24px, 4vw, 64px)", alignItems: "start" }}>
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="stake-h">
                   What was actually at <em>stake.</em>
                 </h2>
               </div>
               <div data-reveal>
-                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                <p style={s.text}>
                   This was not just an efficiency issue. It was an operational leverage issue.
                 </p>
-                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                <p style={{ ...s.text, marginTop: "16px" }}>
                   If those workflows stayed physical and manual, the company would keep needing more effort to handle more work. Throughput would improve slowly. Process inconsistency would remain high. Management visibility would stay weak. And every attempt to grow output would recreate the same friction at a larger scale.
                 </p>
-                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                <p style={{ ...s.text, marginTop: "16px", color: "var(--fg)" }}>
                   That is the trap many large businesses fall into. They scale activity before they scale the system that activity depends on.
                 </p>
               </div>
@@ -158,41 +166,37 @@ export default function ManufacturingDigitalWorkflowsPage() {
           </div>
         </section>
 
+        {/* ── What Senatio did ── */}
         <section className="section" aria-labelledby="senatio-h">
           <div className="wrap">
-            <div
-              style={{
-                display: "grid",
-                gap: "clamp(24px, 4vw, 64px)",
-                alignItems: "start",
-              }}
-            >
+            <div style={{ display: "grid", gap: "clamp(24px, 4vw, 64px)", alignItems: "start" }}>
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="senatio-h">
                   What Senatio <em>did.</em>
                 </h2>
               </div>
               <div data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Senatio started by treating the problem as a workflow redesign problem, not a tooling purchase problem.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                First, the existing process had to be mapped honestly. That meant understanding what was still physical, where manual interventions kept happening, which approvals created repeated friction, where information disappeared from view, and where the business was paying hidden execution tax every day without always noticing it.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Second, Senatio helped redesign the flow so the work could move digitally instead of depending on scattered physical artifacts and repeated manual follow-up. The goal was to make the key states in the workflow visible, reduce ambiguity, and remove the need for people to constantly ask where something stood.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Third, Senatio introduced practical automation and internal system logic where it created real leverage. The point was not to automate for optics. The point was to remove the repetitive human handling that was slowing the business down and making control weaker than it should have been.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                What changed was not only the software layer. The operating behavior of the workflow changed.
-              </p>
+                <p style={s.text}>
+                  Senatio started by treating the problem as a workflow redesign problem, not a tooling purchase problem.
+                </p>
+                <p style={{ ...s.text, marginTop: "16px" }}>
+                  First, the existing process had to be mapped honestly. That meant understanding what was still physical, where manual interventions kept happening, which approvals created repeated friction, where information disappeared from view, and where the business was paying hidden execution tax every day without always noticing it.
+                </p>
+                <p style={{ ...s.text, marginTop: "16px" }}>
+                  Second, Senatio helped redesign the flow so the work could move digitally instead of depending on scattered physical artifacts and repeated manual follow-up. The goal was to make the key states in the workflow visible, reduce ambiguity, and remove the need for people to constantly ask where something stood.
+                </p>
+                <p style={{ ...s.text, marginTop: "16px" }}>
+                  Third, Senatio introduced practical automation and internal system logic where it created real leverage. The point was not to automate for optics. The point was to remove the repetitive human handling that was slowing the business down and making control weaker than it should have been.
+                </p>
+                <p style={{ ...s.text, marginTop: "16px", color: "var(--fg)" }}>
+                  What changed was not only the software layer. The operating behavior of the workflow changed.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* ── What changed ── */}
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="changed-h">
           <div className="wrap">
             <div className="section-head">
@@ -217,6 +221,7 @@ export default function ManufacturingDigitalWorkflowsPage() {
           </div>
         </section>
 
+        {/* ── Why it worked ── */}
         <section className="section" aria-labelledby="why-h">
           <div className="wrap">
             <div className="section-head">
@@ -226,35 +231,52 @@ export default function ManufacturingDigitalWorkflowsPage() {
                 </h2>
               </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "clamp(24px, 4vw, 48px)" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+            <div style={s.max} data-reveal>
+              <p style={s.text}>
                 The work succeeded because Senatio did not diagnose the issue as &ldquo;the company needs software.&rdquo; It diagnosed it as &ldquo;the company is still relying on people to carry a system that should be carried by a workflow.&rdquo; That is a much more useful level of thinking. Once the weak points were made visible and the workflow was redesigned around digital movement and practical automation, the business gained leverage that additional effort alone would never have created.
               </p>
+            </div>
+          </div>
+        </section>
 
-              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
-                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
-                  Why buyers trust Senatio
-                </p>
-                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
-                  A buyer reading this should feel that Senatio understands messy operational reality. Paper-driven handoffs. Spreadsheets pretending to be systems. Approvals living across calls, emails, and people&rsquo;s memory. Managers becoming human middleware because the workflow is not doing its job. That credibility matters. It tells the buyer these are people who can walk into operational complexity, understand it quickly, and improve it without hiding behind vague transformation language.
-                </p>
+        {/* ── Why this makes buyers trust Senatio ── */}
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="trust-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="trust-h">
+                  Why this makes buyers trust <em>Senatio.</em>
+                </h2>
               </div>
+            </div>
+            <div style={s.max} data-reveal>
+              <p style={s.text}>
+                A buyer reading this should feel that Senatio understands messy operational reality. Paper-driven handoffs. Spreadsheets pretending to be systems. Approvals living across calls, emails, and people&rsquo;s memory. Managers becoming human middleware because the workflow is not doing its job. That credibility matters. It tells the buyer these are people who can walk into operational complexity, understand it quickly, and improve it without hiding behind vague transformation language.
+              </p>
+            </div>
+          </div>
+        </section>
 
-              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
-                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
-                  Bottom line
-                </p>
-                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem", margin: 0 }}>
-                  The client did not just digitize a process. It reduced dependence on physical handling, manual follow-up, and human workflow glue. The result was stronger control, better throughput, clearer visibility, and a business that could handle more work without scaling friction at the same rate.
-                </p>
+        {/* ── Bottom line ── */}
+        <section className="section" aria-labelledby="bottom-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="bottom-h">
+                  Bottom <em>line.</em>
+                </h2>
               </div>
-
-              <div>
-                <Link href="/contact" className="btn btn-primary">
-                  <span>Talk to us about digitizing and automating broken internal workflows</span>
-                  <BtnArrow />
-                </Link>
-              </div>
+            </div>
+            <div style={s.max} data-reveal>
+              <p style={{ ...s.text, color: "var(--fg)", fontSize: "1.1rem" }}>
+                The client did not just digitize a process. It reduced dependence on physical handling, manual follow-up, and human workflow glue. The result was stronger control, better throughput, clearer visibility, and a business that could handle more work without scaling friction at the same rate.
+              </p>
+            </div>
+            <div style={{ marginTop: "32px" }} data-reveal>
+              <Link href="/contact" className="btn btn-primary">
+                <span>Talk to us about digitizing and automating broken internal workflows</span>
+                <BtnArrow />
+              </Link>
             </div>
           </div>
         </section>

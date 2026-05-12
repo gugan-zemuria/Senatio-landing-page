@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,9 +24,59 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://senatio.com"),
   title: "Build, Operate, Scale, and Automate from India | Senatio",
   description:
-    "Senatio helps global companies build, operate, and scale engineering teams from India, while also solving internal execution problems through workflow improvement, practical automation, and custom software.",
+    "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
+  keywords: [
+    "engineering teams India",
+    "hire engineers India",
+    "managed engineering teams",
+    "offshore engineering India",
+    "build engineering team India",
+    "engineering team scaling",
+  ],
+  authors: [{ name: "Senatio", url: "https://senatio.com" }],
+  creator: "Senatio",
+  publisher: "Senatio",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://senatio.com",
+    siteName: "Senatio",
+    title: "Build, Operate, Scale, and Automate from India | Senatio",
+    description:
+      "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Senatio – Build, Operate & Scale Engineering Teams from India",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Build, Operate, Scale, and Automate from India | Senatio",
+    description:
+      "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
+    images: ["/og-image.png"],
+  },
+  verification: {
+    google: "google53765785b38c8f17",
+  },
 };
 
 export default function RootLayout({
@@ -48,8 +99,30 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem("senatio-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();`,
           }}
         />
+        <Script
+          id="org-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Senatio",
+              url: "https://senatio.com",
+              logo: "https://senatio.com/senatio_dark_logo.svg",
+              description:
+                "Senatio helps global companies build, operate, and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
+              sameAs: [],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "sales",
+                url: "https://senatio.com/contact",
+              },
+            }),
+          }}
+        />
         {children}
       </body>
+      <GoogleAnalytics gaId="G-DE366NRKT0" />
     </html>
   );
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
-import Roles from "@/components/Roles";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
@@ -29,6 +28,30 @@ const BtnArrow = () => (
   </svg>
 );
 
+const s = {
+  text: { color: "var(--fg-2)" as const, lineHeight: 1.65 as const, fontSize: "1.05rem" as const, margin: 0 as const },
+  textSm: { color: "var(--fg-2)" as const, lineHeight: 1.55 as const, fontSize: "0.95rem" as const, margin: 0 as const },
+  stack: { display: "flex" as const, flexDirection: "column" as const, gap: "16px" as const },
+  max: { maxWidth: "640px" as const },
+};
+
+const functionRoles = [
+  { name: "Frontend engineers", desc: "For product interfaces, user-facing applications, and experience quality." },
+  { name: "Backend engineers", desc: "For APIs, system logic, platform capability, integrations, and core application behavior." },
+  { name: "Full-stack engineers", desc: "For teams that need flexibility across product delivery." },
+  { name: "QA engineers", desc: "For release confidence, testing discipline, and product stability." },
+  { name: "DevOps engineers", desc: "For infrastructure reliability, deployment workflows, observability, and resilience." },
+  { name: "Data engineers", desc: "For pipelines, data systems, and structured movement of information." },
+  { name: "AI engineers", desc: "For applied AI features, workflow support, and AI-enabled internal tooling where relevant." },
+];
+
+const levelRoles = [
+  { name: "Junior engineers", desc: "Best when the operating structure already exists and the environment can support them well." },
+  { name: "Mid-level engineers", desc: "Best for strong day-to-day delivery across product and platform work." },
+  { name: "Senior engineers", desc: "Best for complex systems, stronger ownership, and higher reliability requirements." },
+  { name: "Tech leads and engineering leads", desc: "Best when coordination, architecture direction, and delivery control matter more." },
+];
+
 const teamShapes = [
   {
     name: "Lean startup team",
@@ -40,7 +63,7 @@ const teamShapes = [
   },
   {
     name: "Scale-up delivery team",
-    roles: "One engineering lead, three mid-level backend engineers, two frontend engineers, one QA engineer, one DevOps engineer, one data or AI engineer where relevant.",
+    roles: "One engineering lead, three backend engineers, two frontend engineers, one QA engineer, one DevOps engineer, and one data or AI engineer where relevant.",
   },
 ];
 
@@ -50,6 +73,7 @@ export default function EngineeringRolesPage() {
       <Grain />
       <Navbar />
       <main>
+        {/* ── Hero ── */}
         <section className="section" aria-labelledby="roles-hero-h">
           <div className="wrap">
             <div className="section-head">
@@ -60,71 +84,115 @@ export default function EngineeringRolesPage() {
                 <h2 className="section-title" id="roles-hero-h">
                   Engineering roles we help build <em>from India.</em>
                 </h2>
-                <p className="section-lede">
-                  Senatio helps clients build the right engineering team, not
-                  just hire individual seats. The right team is shaped by
-                  delivery goals, product complexity, stage of growth, and the
-                  way work needs to get done.
+                <p className="section-lede" style={{ maxWidth: "68ch" }}>
+                  Senatio helps clients build the right engineering team, not just fill individual seats. The right team depends on delivery goals, product complexity, stage of growth, and the operating reality around the work.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* ── Think in team design ── */}
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="think-h">
           <div className="wrap">
             <div className="section-head">
-              <div data-reveal>
+              <div data-reveal data-delay="1">
                 <h2 className="section-title" id="think-h">
-                  Think in teams, not <em>isolated hires.</em>
+                  Think in team design, not <em>isolated hires.</em>
                 </h2>
-                <p className="section-lede" style={{ maxWidth: "68ch" }}>
-                  One of the biggest mistakes companies make when building
-                  engineering teams in India is thinking only in terms of single
-                  positions. A stronger approach is to think about the team as a
-                  system. The right mix of roles often matters more than any one
-                  hire.
-                </p>
-                <p className="section-lede" style={{ maxWidth: "68ch" }}>
-                  Some teams need a lean build with strong full-stack execution.
-                  Others need more backend depth, stronger QA discipline, or a
-                  more senior technical layer from the beginning. Senatio helps
-                  clients think through that mix before hiring starts, so the
-                  team is designed with real delivery needs in mind.
-                </p>
               </div>
+            </div>
+            <div style={{ ...s.max, ...s.stack }} data-reveal>
+              <p style={s.text}>
+                One of the biggest mistakes companies make when building from India is thinking only in terms of individual roles. A stronger approach is to think in systems. The mix of roles often matters more than any one hire.
+              </p>
             </div>
           </div>
         </section>
 
-        <Roles />
-
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="mix-h">
+        {/* ── Roles by function ── */}
+        <section className="section" aria-labelledby="func-roles-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
-                <h2 className="section-title" id="mix-h">
-                  How to think about <em>team mix.</em>
+                <h2 className="section-title" id="func-roles-h">
+                  Roles by <em>function</em>
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The best team design depends on what the company is trying to
-                accomplish. A startup looking to move fast on product might need
-                a compact full-stack team. A growth-stage company may need more
-                defined frontend, backend, QA, and DevOps support. A company
-                modernizing internal systems may need stronger backend, DevOps,
-                and data capability.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Senatio helps clients map team shape to business reality, not to
-                abstract org charts.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
+              }}
+            >
+              {functionRoles.map((role) => (
+                <article
+                  key={role.name}
+                  style={{
+                    background: "var(--bg-2)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
+                  }}
+                  data-reveal
+                >
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {role.name}
+                  </h3>
+                  <p style={s.textSm}>{role.desc}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
+        {/* ── Roles by level ── */}
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="level-roles-h">
+          <div className="wrap">
+            <div className="section-head">
+              <div data-reveal data-delay="1">
+                <h2 className="section-title" id="level-roles-h">
+                  Roles by <em>level</em>
+                </h2>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "20px",
+              }}
+            >
+              {levelRoles.map((role) => (
+                <article
+                  key={role.name}
+                  style={{
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
+                  }}
+                  data-reveal
+                >
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
+                    {role.name}
+                  </h3>
+                  <p style={s.textSm}>{role.desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Example team shapes ── */}
         <section className="section" aria-labelledby="shapes-h">
           <div className="wrap">
             <div className="section-head">
@@ -132,10 +200,6 @@ export default function EngineeringRolesPage() {
                 <h2 className="section-title" id="shapes-h">
                   Example team <em>shapes.</em>
                 </h2>
-                <p className="section-lede">
-                  Every team is different, but these common patterns give a
-                  sense of how teams are composed in practice.
-                </p>
               </div>
             </div>
             <div
@@ -167,31 +231,9 @@ export default function EngineeringRolesPage() {
                   >
                     {shape.name}
                   </h3>
-                  <p style={{ color: "var(--fg-2)", lineHeight: 1.55, margin: 0, fontSize: "0.95rem" }}>
-                    {shape.roles}
-                  </p>
+                  <p style={s.textSm}>{shape.roles}</p>
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="planning-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="planning-h">
-                  Why role planning <em>matters.</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "620px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                A well-designed team launches faster, performs better, and
-                becomes easier to scale. Better role planning also makes pricing
-                more sensible, hiring more targeted, and delivery expectations
-                more realistic.
-              </p>
             </div>
             <div style={{ marginTop: "32px" }} data-reveal>
               <Link href="/contact" className="btn btn-primary">

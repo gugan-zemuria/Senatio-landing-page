@@ -8,7 +8,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Contact Senatio | Build Your Engineering Team from India",
   description:
-    "Talk to Senatio about building, operating, improving, or scaling your engineering team from India with managed execution and stronger delivery support.",
+    "Talk to Senatio about building, operating, improving, or scaling your engineering team from India with managed execution and lower delivery friction.",
 };
 
 const BtnArrow = () => (
@@ -44,10 +44,7 @@ export default function ContactPage() {
                   Talk to us about your <em>engineering team.</em>
                 </h2>
                 <p className="section-lede" style={{ maxWidth: "60ch" }}>
-                  If you are exploring how to build, operate, improve, or scale
-                  your engineering team from India, Senatio can help. Talk to us
-                  about team structure, launch timelines, operating support,
-                  workflow improvement, and commercial structure.
+                  If you are exploring how to add engineering capacity from India, improve internal execution, automate workflow bottlenecks, or build practical internal systems, Senatio can help. Talk to us about team structure, launch timelines, operating support, workflow improvement, and commercial structure.
                 </p>
               </div>
             </div>

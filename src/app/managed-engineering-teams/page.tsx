@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Managed Engineering Teams from India | Senatio",
   description:
-    "Senatio provides managed engineering teams from India with hiring support, onboarding, delivery oversight, continuity, and scaling support built into the model.",
+    "Senatio provides managed engineering teams from India with built-in hiring, onboarding, delivery oversight, continuity, and scaling support.",
 };
 
 const BtnArrow = () => (

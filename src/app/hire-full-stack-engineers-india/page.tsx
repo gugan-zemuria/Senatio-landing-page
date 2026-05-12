@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Hire Full-Stack Engineers in India | Senatio",
   description:
-    "Hire full-stack engineers in India with Senatio. Build flexible engineering capacity with faster launch timelines, better team structure, and managed execution support.",
+    "Hire full-stack engineers in India with Senatio. Flexible engineering capacity with faster launch timelines, better team structure, and managed execution support.",
 };
 
 const BtnArrow = () => (

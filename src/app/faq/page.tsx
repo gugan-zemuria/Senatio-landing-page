@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
 import Faq from "@/components/Faq";
@@ -6,15 +7,92 @@ import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is this outsourcing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Senatio is built around managed engineering capability from India. The model gives clients more structure, more continuity, and more control than a traditional outsourcing relationship.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is this staff augmentation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Senatio is not built around loose seat-filling. The model is based on building and operating engineering teams with real structure and support.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you only help with hiring?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Hiring is only one part of the model. Senatio also helps with launch, operating discipline, continuity, scale, workflow improvement, and internal solution work where needed.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you help improve workflows too?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Senatio helps improve coordination, visibility, reporting, and practical automation where those issues are hurting execution.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How quickly can a team be launched?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In many cases, teams can be launched in 2 weeks or less, depending on the roles, hiring complexity, and team shape required.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can we start small?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. In most cases, a 2-engineer team is the stronger starting point, but smaller pilot structures can still be discussed where appropriate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can we scale later?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The model is designed to help clients scale up as needs grow and reduce or reshape the team more cleanly when priorities change.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is pricing structured?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pricing is structured around a setup phase, monthly managed team pricing, and separately scoped execution improvement or internal solution work where needed.",
+      },
+    },
+
+  ],
+};
+
 export const metadata: Metadata = {
   title: "FAQ on Building Engineering Teams from India | Senatio",
   description:
-    "Answers to common questions about building engineering teams from India, managed execution, team pricing, workflow improvement, and scaling with Senatio.",
+    "Answers to common questions about building engineering teams from India, managed execution, pricing, workflow improvement, and scaling with Senatio.",
 };
 
 export default function FaqPage() {
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Grain />
       <Navbar />
       <main>

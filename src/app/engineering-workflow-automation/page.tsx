@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Engineering Workflow Automation | Senatio",
   description:
-    "Improve engineering execution with workflow automation, reporting, visibility, and practical AI-enabled operations. Senatio helps teams reduce friction and move faster.",
+    "Improve engineering execution with workflow automation, reporting, visibility, and practical AI-enabled operations. Reduce friction and move faster.",
 };
 
 const BtnArrow = () => (

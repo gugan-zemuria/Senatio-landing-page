@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Engineering Workflow Improvement and Automation | Senatio",
   description:
-    "Senatio helps companies improve execution around engineering teams through workflow improvement, delivery visibility, practical automation, and AI-enabled internal operations.",
+    "Senatio helps companies improve execution around engineering teams through workflow improvement, delivery visibility, practical automation, and internal operating support.",
 };
 
 const BtnArrow = () => (
@@ -28,15 +28,21 @@ const BtnArrow = () => (
   </svg>
 );
 
+const s = {
+  text: { color: "var(--fg-2)" as const, lineHeight: 1.65 as const, fontSize: "1.05rem" as const, margin: 0 as const },
+  textSm: { color: "var(--fg-2)" as const, lineHeight: 1.55 as const, fontSize: "0.95rem" as const, margin: 0 as const },
+  stack: { display: "flex" as const, flexDirection: "column" as const, gap: "16px" as const },
+  max: { maxWidth: "640px" as const },
+};
+
 const bottlenecks = [
-  "Unclear ownership across engineering workstreams",
-  "Weak delivery visibility for founders, leaders, or operators",
-  "Manual reporting that wastes time every week",
+  "Weak delivery visibility",
   "Poor coordination between product, engineering, and operations",
-  "Repetitive internal tasks that slow execution",
-  "Release or QA processes that create avoidable drag",
-  "Fragmented internal tooling that reduces clarity",
-  "Slow feedback loops that block delivery momentum",
+  "Manual reporting overhead",
+  "Repeated internal status chasing",
+  "Release and QA friction",
+  "Fragmented internal tooling",
+  "Workflow bottlenecks that slow output",
 ];
 
 const howWeHelp = [
@@ -44,38 +50,8 @@ const howWeHelp = [
   "Reporting and dashboard improvement",
   "Internal coordination improvements",
   "Automation of repetitive operational tasks",
-  "Internal tooling support where relevant",
-  "AI-enabled workflow improvement where it creates practical value",
-];
-
-const useCases = [
-  {
-    title: "Engineering workflow automation",
-    desc: "Reduce manual status chasing, repeated updates, and fragmented coordination across the team.",
-  },
-  {
-    title: "QA and release support",
-    desc: "Improve handoffs, release discipline, testing visibility, and process clarity around shipping.",
-  },
-  {
-    title: "Internal dashboards and reporting",
-    desc: "Give founders, operators, and team leads a clearer view into progress, blockers, and execution health.",
-  },
-  {
-    title: "Support workflow tooling",
-    desc: "Reduce repetitive internal back-and-forth where support or operations processes slow delivery down.",
-  },
-  {
-    title: "AI-assisted internal operations",
-    desc: "Use lightweight AI-enabled workflows where they remove friction without adding unnecessary complexity.",
-  },
-];
-
-const whatsNot = [
-  "Not generic AI consulting",
-  "Not broad business transformation across every function",
-  "Not disconnected automation experiments",
-  "Not a separate strategy layer with no operational follow-through",
+  "Support for better internal systems where needed",
+  "AI-enabled workflow improvement where it creates real leverage",
 ];
 
 export default function ExecutionImprovementPage() {
@@ -84,6 +60,7 @@ export default function ExecutionImprovementPage() {
       <Grain />
       <Navbar />
       <main>
+        {/* ── Hero ── */}
         <section className="section" aria-labelledby="ei-hero-h">
           <div className="wrap">
             <div className="section-head">
@@ -95,45 +72,32 @@ export default function ExecutionImprovementPage() {
                   Improve execution around your <em>engineering team.</em>
                 </h2>
                 <p className="section-lede" style={{ maxWidth: "68ch" }}>
-                  Building the right team is only part of the job. Delivery also
-                  depends on how work moves, how information is shared, and how
-                  much manual friction slows the team down. Senatio helps improve
-                  execution around the engineering team through better workflows,
-                  practical automation, and stronger visibility.
+                  Good engineers still underperform inside weak systems. Senatio helps improve execution around the engineering team through workflow redesign, better visibility, practical automation, and cleaner internal operating logic.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* ── What execution improvement really means ── */}
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="what-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="what-h">
-                  What execution improvement <em>means.</em>
+                  What execution improvement really <em>means.</em>
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Execution improvement is not vague transformation language and it
-                is not broad consulting theatre. It is practical work that helps
-                an engineering team run better day to day. That may mean reducing
-                repetitive coordination, improving reporting, tightening release
-                processes, clarifying ownership, or introducing internal tooling
-                that removes avoidable drag.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                For many companies, the team itself is not the only problem. The
-                workflows around the team can be just as limiting. Good engineers
-                still struggle when execution is slowed by unclear handoffs, poor
-                visibility, manual updates, or weak operational systems.
+            <div style={{ ...s.max, ...s.stack }} data-reveal>
+              <p style={s.text}>
+                Execution improvement is not generic transformation language. It is practical work that helps a team and the business around it run better. That can mean reducing repetitive coordination, improving reporting, tightening release flow, clarifying ownership, or fixing the operational weak points that slow delivery down.
               </p>
             </div>
           </div>
         </section>
 
+        {/* ── Common bottlenecks ── */}
         <section className="section" aria-labelledby="bottlenecks-h">
           <div className="wrap">
             <div className="section-head">
@@ -171,6 +135,7 @@ export default function ExecutionImprovementPage() {
           </div>
         </section>
 
+        {/* ── How Senatio helps ── */}
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="how-h">
           <div className="wrap">
             <div className="section-head">
@@ -178,13 +143,6 @@ export default function ExecutionImprovementPage() {
                 <h2 className="section-title" id="how-h">
                   How Senatio <em>helps.</em>
                 </h2>
-                <p className="section-lede" style={{ maxWidth: "68ch" }}>
-                  We look at the workflows around the engineering team and
-                  identify where better structure or light automation can improve
-                  speed, quality, and visibility. The goal is not to redesign the
-                  entire company. The goal is to help the team and the surrounding
-                  execution layer work better.
-                </p>
               </div>
             </div>
             <div
@@ -215,137 +173,22 @@ export default function ExecutionImprovementPage() {
           </div>
         </section>
 
-        <section className="section" aria-labelledby="usecases-h">
+        {/* ── Why this matters ── */}
+        <section className="section" aria-labelledby="why-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
-                <h2 className="section-title" id="usecases-h">
-                  Examples of execution <em>improvement.</em>
+                <h2 className="section-title" id="why-h">
+                  Why this <em>matters.</em>
                 </h2>
               </div>
             </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "24px",
-              }}
-            >
-              {useCases.map((item) => (
-                <article
-                  key={item.title}
-                  style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
-                    background: "var(--bg)",
-                    padding: "24px",
-                    borderRadius: "8px",
-                  }}
-                  data-reveal
-                >
-                  <p className="mono" style={{ marginBottom: "8px" }}>
-                    Use case
-                  </p>
-                  <h3
-                    style={{
-                      fontFamily: "var(--serif)",
-                      fontSize: "1.1rem",
-                      margin: "0 0 8px",
-                      fontWeight: 380,
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p style={{ color: "var(--fg-2)", lineHeight: 1.55, margin: 0, fontSize: "0.95rem" }}>
-                    {item.desc}
-                  </p>
-                </article>
-              ))}
+            <div style={{ ...s.max, ...s.stack }} data-reveal>
+              <p style={s.text}>
+                Execution problems are expensive because they hide inside otherwise capable teams. Businesses often think they need more people when the deeper issue is coordination, visibility, or process drag. Senatio helps remove that drag so the team becomes more commercially useful.
+              </p>
             </div>
-          </div>
-        </section>
-
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="not-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="not-h">
-                  What this is <em>not.</em>
-                </h2>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                gap: "16px",
-              }}
-            >
-              {whatsNot.map((item, i) => (
-                <article
-                  key={item}
-                  style={{
-                    borderTop: "1px solid var(--accent)",
-                    paddingTop: "14px",
-                  }}
-                  data-reveal
-                >
-                  <p style={{ color: "var(--fg)", lineHeight: 1.5, margin: 0, fontSize: "0.95rem" }}>
-                    {item}
-                  </p>
-                </article>
-              ))}
-            </div>
-            <div
-              style={{
-                marginTop: "32px",
-                paddingTop: "28px",
-                borderTop: "1px solid var(--line)",
-                maxWidth: "640px",
-              }}
-              data-reveal
-            >
-              <p
-                className="mono"
-                style={{ marginBottom: "14px", color: "var(--accent)" }}
-              >
-                Why this matters
-              </p>
-              <p
-                style={{
-                  color: "var(--fg-2)",
-                  lineHeight: 1.65,
-                  fontSize: "1.05rem",
-                  margin: "0 0 16px 0",
-                }}
-              >
-                Execution problems are expensive because they often hide behind
-                otherwise capable teams. A client may believe the issue is hiring
-                speed or staffing depth, when the deeper issue is coordination,
-                visibility, or process drag. By improving execution around the
-                engineering team, Senatio helps clients get more value out of the
-                team they are already building.
-              </p>
-              <p
-                className="mono"
-                style={{ marginBottom: "14px", color: "var(--accent)" }}
-              >
-                Where this fits
-              </p>
-              <p
-                style={{
-                  color: "var(--fg-2)",
-                  lineHeight: 1.65,
-                  fontSize: "1.05rem",
-                  margin: "0 0 24px 0",
-                }}
-              >
-                This work supports the Build, Operate, Scale model. It does not
-                replace it. Senatio is still fundamentally about helping clients
-                build and run strong engineering teams from India. Execution
-                improvement is the layer that helps those teams perform better
-                once they are live.
-              </p>
+            <div style={{ marginTop: "32px" }} data-reveal>
               <Link href="/contact" className="btn btn-primary">
                 <span>Talk to us about your execution bottlenecks</span>
                 <BtnArrow />

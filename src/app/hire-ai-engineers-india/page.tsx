@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Hire AI Engineers in India | Senatio",
   description:
-    "Hire AI engineers in India with Senatio. Build applied AI capability for product features, internal tooling, workflow automation, and scalable AI-enabled execution.",
+    "Hire AI engineers in India with Senatio. Build applied AI capability for product features, internal tooling, workflow automation, and scalable execution.",
 };
 
 const BtnArrow = () => (

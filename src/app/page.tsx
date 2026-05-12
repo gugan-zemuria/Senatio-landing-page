@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Loader from "@/components/Loader";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
@@ -9,6 +10,13 @@ import Ledger from "@/components/Ledger";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
+
+export const metadata: Metadata = {
+  title: "Build, Operate, Scale, and Automate from India | Senatio",
+  description:
+    "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
+  alternates: { canonical: "https://senatio.com" },
+};
 
 export default function Home() {
   return (

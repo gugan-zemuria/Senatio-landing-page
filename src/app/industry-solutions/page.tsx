@@ -47,15 +47,8 @@ export default function IndustrySolutionsPage() {
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="is-solutions-h">
+        <section className="section" style={{ background: "var(--bg-2)" }}>
           <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="is-solutions-h">
-                  How we help different <em>companies.</em>
-                </h2>
-              </div>
-            </div>
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
