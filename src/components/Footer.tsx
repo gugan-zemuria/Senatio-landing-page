@@ -75,7 +75,7 @@ export default function Footer() {
 
         <div className="foot-bottom">
           <span className="foot-copy">Copyright &copy; 2024–2026 by Senatio.</span>
-          <span className="foot-legal">a <a href="https://zemuria.com/" target="_blank" rel="noopener noreferrer" className="foot-link">Zemuria Inc.</a> Brand. Contracts are executed by the relevant entity (<a href="https://zemuria.com/" target="_blank" rel="noopener noreferrer" className="foot-link">Zemuria Inc.</a> USA or Mercemur Technologies Pvt Ltd India).</span>
+          <span className="foot-legal">a <a href="https://zemuria.com/" target="_blank" rel="noopener noreferrer" className="foot-link">Zemuria Inc.</a> Brand. Contracts are executed by the relevant entity ( Zemuria Inc. USA or Mercemur Technologies Pvt Ltd India ).</span>
         </div>
       </div>
     </footer>
