@@ -2,43 +2,47 @@
 
 import { useState, useEffect } from "react";
 
-type Region = "us" | "india";
+function detectIndia(): boolean {
+  // 1. Check cookie set by middleware (Vercel production / manual override)
+  const cookies = document.cookie.split("; ");
+  const geo = cookies.find((c) => c.startsWith("geo-country="));
+  if (geo) return geo === "geo-country=IN";
 
-function detectRegion(): Region {
+  // 2. Fallback: timezone detection (localhost without cookie)
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (tz === "Asia/Kolkata" || tz === "Asia/Calcutta") {
-      return "india";
-    }
+    return tz === "Asia/Kolkata" || tz === "Asia/Calcutta";
   } catch {
-    /* fall through */
+    return false;
   }
-  return "us";
 }
 
 export default function FooterAddress() {
-  const [region, setRegion] = useState<Region | null>(null);
+  const [isIndia, setIsIndia] = useState<boolean | null>(null);
 
   useEffect(() => {
-    setRegion(detectRegion());
+    setIsIndia(detectIndia());
   }, []);
 
-  if (region === "us") {
+  // Render nothing until detection runs (avoids hydration mismatch)
+  if (isIndia === null) return null;
+
+  if (isIndia) {
     return (
       <p className="foot-addr">
-        <strong>United States</strong>
-        1007 N Orange St., 4th Floor, #1189<br />
-        Wilmington, Delaware 19801
+        <strong>India</strong>
+        Mercemur Technologies Private Limited<br />
+        Suite No. 33, 388 Vazhudavur Main Road<br />
+        Shanmugapuram, Pondicherry 605009
       </p>
     );
   }
 
   return (
     <p className="foot-addr">
-      <strong>India</strong>
-      Mercemur Technologies Private Limited<br />
-      Suite No. 33, 388 Vazhudavur Main Road<br />
-      Shanmugapuram, Pondicherry 605009
+      <strong>United States</strong>
+      1007 N Orange St., 4th Floor, #1189<br />
+      Wilmington, Delaware 19801
     </p>
   );
 }
