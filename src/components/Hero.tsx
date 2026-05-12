@@ -10,10 +10,10 @@ const BtnArrow = () => (
 );
 
 const routes = [
-  { from: "Bengaluru", to: "San Francisco" },
-  { from: "Bengaluru", to: "New York" },
-  { from: "Bengaluru", to: "London" },
-  { from: "Bengaluru", to: "Singapore" },
+  { from: "PONDICHÉRY", to: "San Francisco" },
+  { from: "PONDICHÉRY", to: "New York" },
+  { from: "PONDICHÉRY", to: "London" },
+  { from: "PONDICHÉRY", to: "Singapore" },
 ];
 
 export default function Hero() {

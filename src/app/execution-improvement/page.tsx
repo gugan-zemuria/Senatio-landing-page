@@ -265,49 +265,6 @@ export default function ExecutionImprovementPage() {
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="why-matters-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="why-matters-h">
-                  Why this <em>matters.</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Execution problems are expensive because they often hide behind
-                otherwise capable teams. A client may believe the issue is hiring
-                speed or staffing depth, when the deeper issue is coordination,
-                visibility, or process drag. By improving execution around the
-                engineering team, Senatio helps clients get more value out of the
-                team they are already building.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" aria-labelledby="fit-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="fit-h" style={{ fontSize: "clamp(1.3rem, 2.2vw, 1.6rem)", maxWidth: "100%" }}>
-                  Where this fits in the <em>Senatio model.</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                This work supports the Build, Operate, Scale model. It does not
-                replace it. Senatio is still fundamentally about helping clients
-                build and run strong engineering teams from India. Execution
-                improvement is the layer that helps those teams perform better
-                once they are live.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="not-h">
           <div className="wrap">
             <div className="section-head">
@@ -339,7 +296,56 @@ export default function ExecutionImprovementPage() {
                 </article>
               ))}
             </div>
-            <div style={{ marginTop: "32px" }} data-reveal>
+            <div
+              style={{
+                marginTop: "32px",
+                paddingTop: "28px",
+                borderTop: "1px solid var(--line)",
+                maxWidth: "640px",
+              }}
+              data-reveal
+            >
+              <p
+                className="mono"
+                style={{ marginBottom: "14px", color: "var(--accent)" }}
+              >
+                Why this matters
+              </p>
+              <p
+                style={{
+                  color: "var(--fg-2)",
+                  lineHeight: 1.65,
+                  fontSize: "1.05rem",
+                  margin: "0 0 16px 0",
+                }}
+              >
+                Execution problems are expensive because they often hide behind
+                otherwise capable teams. A client may believe the issue is hiring
+                speed or staffing depth, when the deeper issue is coordination,
+                visibility, or process drag. By improving execution around the
+                engineering team, Senatio helps clients get more value out of the
+                team they are already building.
+              </p>
+              <p
+                className="mono"
+                style={{ marginBottom: "14px", color: "var(--accent)" }}
+              >
+                Where this fits
+              </p>
+              <p
+                style={{
+                  color: "var(--fg-2)",
+                  lineHeight: 1.65,
+                  fontSize: "1.05rem",
+                  margin: "0 0 24px 0",
+                }}
+              >
+                This work supports the Build, Operate, Scale model. It does not
+                replace it. Senatio is still fundamentally about helping clients
+                build and run strong engineering teams from India. Execution
+                improvement is the layer that helps those teams perform better
+                once they are live.
+              </p>
               <Link href="/contact" className="btn btn-primary">
                 <span>Talk to us about your execution bottlenecks</span>
                 <BtnArrow />

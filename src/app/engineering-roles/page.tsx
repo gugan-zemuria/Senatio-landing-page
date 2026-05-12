@@ -193,19 +193,7 @@ export default function EngineeringRolesPage() {
                 more realistic.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="wrap">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                paddingTop: "8px",
-              }}
-              data-reveal
-            >
+            <div style={{ marginTop: "32px" }} data-reveal>
               <Link href="/contact" className="btn btn-primary">
                 <span>Talk to us about your ideal team structure</span>
                 <BtnArrow />

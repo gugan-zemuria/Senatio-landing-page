@@ -40,30 +40,16 @@ export default function InternalToolsPage() {
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="it-value-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="it-value-h">
-                  When this becomes <em>valuable.</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Many companies do not only need more engineering capacity. They need better internal systems. Reporting stays manual. Workflows are fragmented. Important steps still depend on spreadsheets, follow-up, and human glue. That is where internal tooling becomes a leverage tool, not just a software project.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" aria-labelledby="it-build-h">
+        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="it-build-h">
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="it-build-h">
                   What Senatio can <em>build.</em>
                 </h2>
+                <p className="section-lede" style={{ maxWidth: "68ch" }}>
+                  Many companies do not only need more engineering capacity. They need better internal systems. Reporting stays manual. Workflows are fragmented. Important steps still depend on spreadsheets, follow-up, and human glue. That is where internal tooling becomes a leverage tool, not just a software project.
+                </p>
               </div>
             </div>
             <div style={{
