@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import KebabMenu from "@/components/ui/kebab-menu";
 
 const BtnArrow = () => (
   <svg
@@ -33,58 +33,18 @@ const caseStudyLinks = [
   { href: "/case-studies/manufacturing-digital-workflows", label: "Manufacturing Digital Workflows" },
 ];
 
-function Dropdown({ label, items, href, onClose }: { label: string; items: { href: string; label: string }[]; href?: string; onClose?: () => void }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLLIElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const onLeave = () => setOpen(false);
-    const onEnter = () => setOpen(true);
-    el.addEventListener("mouseenter", onEnter);
-    el.addEventListener("mouseleave", onLeave);
-    return () => {
-      el.removeEventListener("mouseenter", onEnter);
-      el.removeEventListener("mouseleave", onLeave);
-    };
-  }, []);
-
-  const handleItemClick = () => {
-    setOpen(false);
-    if (onClose) onClose();
-  };
-
+function Dropdown({ label, items, href }: { label: string; items: { href: string; label: string }[]; href?: string }) {
   return (
-    <li
-      ref={ref}
-      className={`nav-dropdown ${open ? "open" : ""}`}
-      onPointerDown={(e) => {
-        if (window.innerWidth > 920) return;
-        // Don't prevent default here to allow links to work, 
-        // but we need to toggle the dropdown if clicking the trigger area
-      }}
-    >
+    <li className="nav-dropdown">
       {href ? (
-        <Link 
-          href={href} 
-          className="nav-dropdown-trigger" 
-          onClick={(e) => {
-            if (window.innerWidth <= 920) {
-              e.preventDefault();
-              setOpen(!open);
-            } else {
-              handleItemClick();
-            }
-          }}
-        >
+        <Link href={href} className="nav-dropdown-trigger">
           {label}
           <svg className="nav-dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             <path d="M6 9l6 6 6-6" />
           </svg>
         </Link>
       ) : (
-        <button className="nav-dropdown-trigger" onClick={() => setOpen((v) => !v)} aria-expanded={open}>
+        <button className="nav-dropdown-trigger" aria-haspopup="true">
           {label}
           <svg className="nav-dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             <path d="M6 9l6 6 6-6" />
@@ -94,9 +54,7 @@ function Dropdown({ label, items, href, onClose }: { label: string; items: { hre
       <ul className="nav-dropdown-menu">
         {items.map((item) => (
           <li key={item.href}>
-            <Link href={item.href} onClick={handleItemClick}>
-              {item.label}
-            </Link>
+            <Link href={item.href}>{item.label}</Link>
           </li>
         ))}
       </ul>
@@ -105,63 +63,23 @@ function Dropdown({ label, items, href, onClose }: { label: string; items: { hre
 }
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  // Close mobile menu on resize if screen becomes desktop
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 920 && mobileOpen) {
-        setMobileOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [mobileOpen]);
-
-  // Prevent scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [mobileOpen]);
-
   return (
-    <nav className={`nav ${mobileOpen ? "mobile-open" : ""}`} aria-label="Primary">
+    <nav className="nav" aria-label="Primary">
       <div className="nav-inner">
-        <Link href="/" className="brand" aria-label="Senatio home" onClick={() => setMobileOpen(false)}>
+        <Link href="/" className="brand" aria-label="Senatio home">
           <img src="/senatio_dark_logo.svg" alt="Senatio" className="brand-logo logo-dark" />
           <img src="/senatio_light_logo.svg" alt="Senatio" className="brand-logo logo-light" />
         </Link>
 
-        <ul className={`nav-links ${mobileOpen ? "show" : ""}`}>
-          <li>
-            <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
-          </li>
-          <li>
-            <Link href="/how-it-works" onClick={() => setMobileOpen(false)}>How It Works</Link>
-          </li>
-          <Dropdown label="Solutions" items={solutionsLinks} onClose={() => setMobileOpen(false)} />
-          <li>
-            <Link href="/pricing" onClick={() => setMobileOpen(false)}>Pricing</Link>
-          </li>
-          <Dropdown label="Case Studies" href="/case-studies" items={caseStudyLinks} onClose={() => setMobileOpen(false)} />
-          <li>
-            <Link href="/faq" onClick={() => setMobileOpen(false)}>FAQ</Link>
-          </li>
-          <li>
-            <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
-          </li>
-          <li>
-            <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-          </li>
-          <li className="mobile-only-cta">
-            <Link href="/contact" className="btn btn-primary" onClick={() => setMobileOpen(false)}>
-              <span>Book a call</span>
-              <BtnArrow />
-            </Link>
-          </li>
+        <ul className="nav-links">
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/how-it-works">How It Works</Link></li>
+          <Dropdown label="Solutions" items={solutionsLinks} />
+          <li><Link href="/pricing">Pricing</Link></li>
+          <Dropdown label="Case Studies" items={caseStudyLinks} href="/case-studies" />
+          <li><Link href="/faq">FAQ</Link></li>
+          <li><Link href="/about">About</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
         </ul>
 
         <div className="nav-actions">
@@ -170,26 +88,20 @@ export default function Navbar() {
             <span>Book a call</span>
             <BtnArrow />
           </Link>
-          
-          <button 
-            className="nav-mobile-toggle" 
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-          >
-            <div className={`hamburger ${mobileOpen ? "active" : ""}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
+          <div className="mobile-kebab-wrapper">
+            <KebabMenu items={[
+              { href: "/", label: "Home" },
+              { href: "/how-it-works", label: "How It Works" },
+              ...solutionsLinks,
+              { href: "/pricing", label: "Pricing" },
+              ...caseStudyLinks,
+              { href: "/faq", label: "FAQ" },
+              { href: "/about", label: "About" },
+              { href: "/contact", label: "Contact" },
+            ]} />
+          </div>
         </div>
       </div>
-      {/* Mobile Backdrop */}
-      <div 
-        className={`nav-backdrop ${mobileOpen ? "show" : ""}`} 
-        onClick={() => setMobileOpen(false)}
-      />
     </nav>
   );
 }
