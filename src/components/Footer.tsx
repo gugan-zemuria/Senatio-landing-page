@@ -33,6 +33,8 @@ export default function Footer() {
               <li><Link href="/how-it-works">How It Works</Link></li>
               <li><Link href="/engineering-roles">Engineering Roles</Link></li>
               <li><Link href="/execution-improvement">Execution Improvement</Link></li>
+              <li><Link href="/internal-tools-custom-software">Internal Tools</Link></li>
+              <li><Link href="/industry-solutions">Industry Solutions</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/case-studies">Case Studies</Link></li>
             </ul>
