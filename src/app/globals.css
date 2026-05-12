@@ -1687,7 +1687,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
   gap: 18px;
   padding: 0 0 32px 0;
   color: var(--fg-2);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   animation: faq-fade .5s cubic-bezier(.2,.7,.2,1);
 }

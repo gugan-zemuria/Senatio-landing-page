@@ -40,7 +40,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}
     >
       <head />
-      <body>
+      <body suppressHydrationWarning>
         <Script
           id="theme-init"
           strategy="beforeInteractive"
