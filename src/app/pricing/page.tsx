@@ -100,47 +100,65 @@ export default function PricingPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "20px",
-                marginTop: "32px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                border: "1px solid var(--line)",
+                background: "var(--bg-2)",
+                marginTop: "40px",
               }}
             >
+              {/* Phase 01 */}
               <article
-                style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: "12px", padding: "24px", display: "flex", flexDirection: "column", gap: "12px" }}
+                style={{ padding: "28px 24px", borderRight: "1px solid var(--line)", display: "flex", flexDirection: "column" }}
                 data-reveal
               >
-                <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>1.</span>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
-                  One-time setup fee
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0" }}>
+                  <span style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted)", fontFamily: "var(--mono)" }}>Phase</span>
+                  <span style={{ fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--accent)", fontFamily: "var(--mono)" }}>01</span>
+                </div>
+                <hr style={{ border: "none", borderTop: "1px solid var(--line)", margin: "20px 0" }} />
+                <h3 style={{ fontSize: "clamp(1.3rem, 2vw, 1.65rem)", fontFamily: "var(--serif)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.025em", margin: "0 0 16px 0", color: "var(--fg)" }}>
+                  One-time <em style={{ fontStyle: "italic", fontWeight: 300 }}>setup fee</em>
                 </h3>
-                <p style={s.textSm}>
+                <p style={{ fontSize: "0.875rem", color: "var(--fg-2)", lineHeight: 1.65, margin: 0 }}>
                   This covers the work required to launch the team properly. That includes team design, role planning, sourcing setup, hiring support, onboarding preparation, and the initial operating setup around the team. This is not invisible overhead. It is the work that makes the launch cleaner, faster, and less fragile.
                 </p>
               </article>
+
+              {/* Phase 02 */}
               <article
-                style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: "12px", padding: "24px", display: "flex", flexDirection: "column", gap: "12px" }}
+                style={{ padding: "28px 24px", borderRight: "1px solid var(--line)", display: "flex", flexDirection: "column" }}
                 data-reveal
                 data-delay="1"
               >
-                <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>2.</span>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
-                  Monthly managed team pricing
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0" }}>
+                  <span style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted)", fontFamily: "var(--mono)" }}>Phase</span>
+                  <span style={{ fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--accent)", fontFamily: "var(--mono)" }}>02</span>
+                </div>
+                <hr style={{ border: "none", borderTop: "1px solid var(--line)", margin: "20px 0" }} />
+                <h3 style={{ fontSize: "clamp(1.3rem, 2vw, 1.65rem)", fontFamily: "var(--serif)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.025em", margin: "0 0 16px 0", color: "var(--fg)" }}>
+                  Monthly managed <em style={{ fontStyle: "italic", fontWeight: 300 }}>team pricing</em>
                 </h3>
-                <p style={s.textSm}>
+                <p style={{ fontSize: "0.875rem", color: "var(--fg-2)", lineHeight: 1.65, margin: 0 }}>
                   Once the team is live, Senatio charges monthly managed pricing for the team and the operating layer around it. This is the core commercial model. It covers the live engineering capacity and the support structure that makes that capacity usable in practice.
                 </p>
               </article>
+
+              {/* Phase 03 */}
               <article
-                style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: "12px", padding: "24px", display: "flex", flexDirection: "column", gap: "12px" }}
+                style={{ padding: "28px 24px", display: "flex", flexDirection: "column" }}
                 data-reveal
                 data-delay="2"
               >
-                <span className="mono" style={{ color: "var(--accent)", fontSize: "0.85rem" }}>3.</span>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--fg)" }}>
-                  Scoped internal solution work where needed
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0" }}>
+                  <span style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted)", fontFamily: "var(--mono)" }}>Phase</span>
+                  <span style={{ fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--accent)", fontFamily: "var(--mono)" }}>03</span>
+                </div>
+                <hr style={{ border: "none", borderTop: "1px solid var(--line)", margin: "20px 0" }} />
+                <h3 style={{ fontSize: "clamp(1.3rem, 2vw, 1.65rem)", fontFamily: "var(--serif)", fontWeight: 400, lineHeight: 1.15, letterSpacing: "-0.025em", margin: "0 0 16px 0", color: "var(--fg)" }}>
+                  Scoped internal <em style={{ fontStyle: "italic", fontWeight: 300 }}>solution work where needed</em>
                 </h3>
-                <p style={s.textSm}>
-                  If the you need workflow automation, internal tools, dashboards, custom software, or deeper execution-improvement work beyond normal team operation, that can be scoped separately. Some lighter work may sit inside a broader engagement. More involved solution work should be treated as its own implementation scope.
+                <p style={{ fontSize: "0.875rem", color: "var(--fg-2)", lineHeight: 1.65, margin: 0 }}>
+                  If you need workflow automation, internal tools, dashboards, custom software, or deeper execution-improvement work beyond normal team operation, that can be scoped separately. Some lighter work may sit inside a broader engagement. More involved solution work should be treated as its own implementation scope.
                 </p>
               </article>
             </div>
