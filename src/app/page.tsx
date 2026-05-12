@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Build, Operate & Scale Engineering Teams in India | Senatio",
+  title: "Build, Operate, Scale, and Automate from India | Senatio",
   description:
     "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
   alternates: { canonical: "https://senatio.com" },

@@ -696,7 +696,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
 .hero-headline {
   font-family: var(--serif);
   font-variation-settings: "opsz" 144, "SOFT" 30, "wght" 380;
-  font-size: clamp(2.8rem, 7.4vw, 7rem);
+  font-size: clamp(2.8rem, 6vw, 5rem);
   line-height: 1;
   padding-bottom: 0.04em;
   letter-spacing: -0.032em;
@@ -1804,7 +1804,7 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
 .final-headline {
   font-family: var(--serif);
   font-variation-settings: "opsz" 144, "SOFT" 30, "wght" 380;
-  font-size: clamp(3rem, 9vw, 8.4rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.94;
   letter-spacing: -0.035em;
   margin: 0;

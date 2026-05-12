@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://senatio.com"),
-  title: "Build, Operate & Scale Engineering Teams in India | Senatio",
+  title: "Build, Operate, Scale, and Automate from India | Senatio",
   description:
     "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
   keywords: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://senatio.com",
     siteName: "Senatio",
-    title: "Build, Operate & Scale Engineering Teams in India | Senatio",
+    title: "Build, Operate, Scale, and Automate from India | Senatio",
     description:
       "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
     images: [
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Build, Operate & Scale Engineering Teams in India | Senatio",
+    title: "Build, Operate, Scale, and Automate from India | Senatio",
     description:
       "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
     images: ["/og-image.png"],

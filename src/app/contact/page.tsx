@@ -8,7 +8,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Contact Senatio | Build Your Engineering Team from India",
   description:
-    "Talk to Senatio about building, operating, improving, or scaling your engineering team from India with managed execution and stronger delivery support.",
+    "Talk to Senatio about building, operating, improving, or scaling your engineering team from India with managed execution and lower delivery friction.",
 };
 
 const BtnArrow = () => (

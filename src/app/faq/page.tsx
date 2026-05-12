@@ -32,7 +32,7 @@ const faqSchema = {
       name: "Do you only help with hiring?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Hiring is only one part of the model. Senatio also helps with team setup, onboarding, operating discipline, continuity, and scale.",
+        text: "No. Hiring is only one part of the model. Senatio also helps with launch, operating discipline, continuity, scale, workflow improvement, and internal solution work where needed.",
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: "Can we scale later?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The model is designed to help clients scale up as needs grow and reduce team size cleanly when priorities change.",
+        text: "Yes. The model is designed to help clients scale up as needs grow and reduce or reshape the team more cleanly when priorities change.",
       },
     },
     {
@@ -72,7 +72,7 @@ const faqSchema = {
       name: "How is pricing structured?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pricing is structured around a setup phase, all-inclusive monthly managed pricing, and added oversight support for larger teams where needed.",
+        text: "Pricing is structured around a setup phase, monthly managed team pricing, and separately scoped execution improvement or internal solution work where needed.",
       },
     },
     {
