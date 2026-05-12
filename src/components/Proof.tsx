@@ -1,28 +1,14 @@
 import Link from "next/link";
 
 const BtnArrow = () => (
-  <svg
-    className="btn-arrow"
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="square"
-    aria-hidden="true"
-  >
+  <svg className="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square" aria-hidden="true">
     <path d="M5 12h14M13 6l6 6-6 6" />
   </svg>
 );
 
 export default function Proof() {
   return (
-    <section
-      className="section proof"
-      id="cases"
-      aria-labelledby="proof-h"
-    >
+    <section className="section proof" id="cases" aria-labelledby="proof-h">
       <div className="wrap">
         <div className="section-head">
           <div data-reveal data-delay="1">
@@ -83,10 +69,10 @@ export default function Proof() {
           data-reveal
         >
           <p className="mono" style={{ margin: 0 }}>
-            Detailed case studies forthcoming · Available on request
+            Detailed case studies available
           </p>
-          <Link href="/contact" className="btn">
-            <span>See case studies</span>
+          <Link href="/case-studies" className="btn">
+            <span>Read case studies</span>
             <BtnArrow />
           </Link>
         </div>

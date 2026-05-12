@@ -37,6 +37,12 @@ export default function Navbar() {
             <Link href="/execution-improvement">Execution Improvement</Link>
           </li>
           <li>
+            <Link href="/internal-tools-custom-software">Internal Tools</Link>
+          </li>
+          <li>
+            <Link href="/industry-solutions">Industry Solutions</Link>
+          </li>
+          <li>
             <Link href="/pricing">Pricing</Link>
           </li>
           <li>

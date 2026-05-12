@@ -4,17 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const BtnArrow = () => (
-  <svg
-    className="btn-arrow"
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="square"
-    aria-hidden="true"
-  >
+  <svg className="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square" aria-hidden="true">
     <path d="M5 12h14M13 6l6 6-6 6" />
   </svg>
 );
@@ -42,25 +32,22 @@ export default function Hero() {
         <div className="hero-grid">
           <div>
             <h1 className="hero-headline" id="hero-h">
-              <span className="word">Build,</span>{" "}
-              <span className="word">
-                <em>operate,</em>
-              </span>{" "}
-              <span className="word">and</span>{" "}
-              <span className="word">
-                <em>scale</em>
-              </span>{" "}
+              <span className="word">Build</span>{" "}
               <span className="word">your</span>{" "}
               <span className="word">engineering</span>{" "}
               <span className="word">team</span>{" "}
               <span className="word">from</span>{" "}
-              <span className="word india">India.</span>
+              <span className="word india">India.</span>{" "}
+              <span className="word">Fix</span>{" "}
+              <span className="word">execution</span>{" "}
+              <span className="word">problems</span>{" "}
+              <span className="word">inside</span>{" "}
+              <span className="word">the</span>{" "}
+              <span className="word">business.</span>
             </h1>
 
             <p className="hero-sub">
-              Senatio helps global companies launch high-performance engineering
-              teams from India in weeks, run them with operator-led discipline,
-              and scale without losing control.
+              Senatio helps global companies add engineering capacity from India, run it with more structure, and improve internal execution through workflow redesign, practical automation, internal tools, and custom software where needed.
             </p>
 
             <div className="hero-ctas">
@@ -75,11 +62,13 @@ export default function Hero() {
             </div>
 
             <div className="hero-support">
-              <span>Launch in 2 weeks or less</span>
+              <span>Launch fast</span>
               <span className="dot" />
-              <span>Managed execution from day one</span>
+              <span>Reduce operating drag</span>
               <span className="dot" />
-              <span>Scale with more confidence</span>
+              <span>Automate repetitive work</span>
+              <span className="dot" />
+              <span>Build practical internal systems</span>
             </div>
           </div>
 
@@ -116,10 +105,7 @@ export default function Hero() {
 
             <div className="hero-routes" aria-hidden="true">
               {routes.map((route, i) => (
-                <div
-                  className={`route${i === activeRoute ? " active" : ""}`}
-                  key={route.to}
-                >
+                <div className={`route${i === activeRoute ? " active" : ""}`} key={route.to}>
                   <span>{route.from}</span>
                   <span className="arrow" />
                   <span>{route.to}</span>
