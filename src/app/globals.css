@@ -1173,6 +1173,15 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
   }
 }
 @media (max-width: 600px) {
+  .bos-stage-card {
+    background: rgba(var(--bg-raw), 0.28);
+    border: 1px solid var(--line);
+    box-shadow: none;
+    padding: clamp(18px, 4vw, 24px);
+  }
+  .bos-stage-card::before {
+    opacity: 0.4;
+  }
   .bos-stage-meta {
     margin-bottom: 20px;
   }
