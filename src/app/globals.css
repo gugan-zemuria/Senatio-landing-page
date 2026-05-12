@@ -1901,6 +1901,11 @@ footer {
   letter-spacing: 0.02em;
   margin-bottom: 10px;
 }
+.foot-addr-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .foot-addr {
   text-transform: none;
   line-height: 1.55;
