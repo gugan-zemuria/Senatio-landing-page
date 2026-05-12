@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
-import About from "@/components/About";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
@@ -35,6 +34,7 @@ export default function AboutPage() {
       <Grain />
       <Navbar />
       <main>
+        {/* ── Hero ── */}
         <section className="section" aria-labelledby="about-hero-h">
           <div className="wrap">
             <div className="section-head">
@@ -43,101 +43,120 @@ export default function AboutPage() {
                   About Senatio
                 </p>
                 <h2 className="section-title" id="about-hero-h">
-                  About <em>Senatio.</em>
+                  An operator-led partner for global companies building
+                  engineering teams <em>from India.</em>
                 </h2>
-                <p className="section-lede" style={{ maxWidth: "60ch" }}>
+                <p className="section-lede" style={{ maxWidth: "68ch" }}>
                   Senatio is an operator-led partner for global companies building
-                  engineering teams from India.
+                  engineering teams from India. We help clients move from hiring
+                  intent to a real engineering team that runs well and grows
+                  cleanly over time.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="why-exist-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal>
-                <h2 className="section-title" id="why-exist-h">
-                  Why we <em>exist.</em>
-                </h2>
-              </div>
-            </div>
-            <div style={{ maxWidth: "620px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Building from India is easy to talk about and much harder to
-                execute well. Hiring is only one part of the challenge. The real
-                challenge is launching the team properly, creating the right
-                operating structure, and scaling without losing quality or
-                control.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" aria-labelledby="focus-h">
+        {/* ── Core beliefs — 3-column grid ── */}
+        <section
+          className="section about-section"
+          aria-labelledby="beliefs-h"
+        >
           <div className="wrap">
             <div className="section-head">
               <div data-reveal data-delay="1">
-                <h2 className="section-title" id="focus-h">
-                  What we <em>focus on.</em>
+                <h2 className="section-title" id="beliefs-h">
+                  What drives <em>Senatio.</em>
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "620px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Senatio is focused on launch speed, execution discipline, and
-                scalable engineering capability. We help clients move from hiring
-                intent to a real engineering team that runs well and grows
-                cleanly over time.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="think-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="think-h">
-                  How we <em>think.</em>
-                </h2>
+            <div className="about-grid" data-reveal>
+              <div>
+                <p
+                  className="mono"
+                  style={{ marginBottom: "12px", color: "var(--accent)" }}
+                >
+                  Why we exist
+                </p>
+                <p>
+                  Building from India is easy to talk about and much harder to
+                  execute well. Hiring is only one part of the challenge. The real
+                  challenge is launching the team properly, creating the right
+                  operating structure, and scaling without losing quality or
+                  control.
+                </p>
+              </div>
+              <div>
+                <p
+                  className="mono"
+                  style={{ marginBottom: "12px", color: "var(--accent)" }}
+                >
+                  What we focus on
+                </p>
+                <p>
+                  Senatio is focused on launch speed, execution discipline, and
+                  scalable engineering capability. We help clients move from hiring
+                  intent to a real engineering team that runs well and grows
+                  cleanly over time.
+                </p>
+              </div>
+              <div>
+                <p
+                  className="mono"
+                  style={{ marginBottom: "12px", color: "var(--accent)" }}
+                >
+                  How we think
+                </p>
+                <p>
+                  The strongest engineering teams are not built through random
+                  hiring bursts or loose seat filling. They are built through
+                  clearer team design, stronger operating rhythm, and practical
+                  execution support. That is the gap Senatio is built to solve.
+                </p>
               </div>
             </div>
-            <div style={{ maxWidth: "620px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The strongest engineering teams are not built through random
-                hiring bursts or loose seat filling. They are built through
-                clearer team design, stronger operating rhythm, and practical
-                execution support. That is the gap Senatio is built to solve.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" aria-labelledby="partner-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="partner-h">
-                  What kind of partner <em>Senatio is.</em>
-                </h2>
+            <div
+              style={{
+                marginTop: "48px",
+                paddingTop: "32px",
+                borderTop: "1px solid var(--line)",
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+              data-reveal
+            >
+              <div>
+                <p
+                  className="mono"
+                  style={{ marginBottom: "12px", color: "var(--accent)" }}
+                >
+                  What kind of partner Senatio is
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "640px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Senatio is not trying to be a broad consulting brand. It is a
-                focused partner for companies that want engineering capability
-                from India with more speed, more structure, and less operational
-                drag. That focus keeps the offer clearer, the delivery model
-                sharper, and the value easier to understand.
-              </p>
-            </div>
-            <div style={{ marginTop: "24px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
-                <span>Talk to us</span>
-                <BtnArrow />
-              </Link>
+              <div>
+                <p
+                  style={{
+                    color: "var(--fg-2)",
+                    lineHeight: 1.65,
+                    fontSize: "1.05rem",
+                    margin: "0 0 24px 0",
+                  }}
+                >
+                  Senatio is not trying to be a broad consulting brand. It is a
+                  focused partner for companies that want engineering capability
+                  from India with more speed, more structure, and less operational
+                  drag. That focus keeps the offer clearer, the delivery model
+                  sharper, and the value easier to understand.
+                </p>
+                <Link href="/contact" className="btn btn-primary">
+                  <span>Talk to us</span>
+                  <BtnArrow />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

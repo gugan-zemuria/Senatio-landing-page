@@ -1706,24 +1706,25 @@ html[data-theme="light"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  max-width: 860px;
   border-top: 1px solid var(--line);
   padding-top: 40px;
 }
 @media (min-width: 760px) {
   .about-grid { grid-template-columns: repeat(3, 1fr); gap: 48px; }
 }
-.about-grid p {
+.about-grid > div {
+  padding-top: 18px;
+  border-top: 2px solid var(--accent);
+}
+.about-grid > div:nth-child(2) { border-top-color: var(--line); }
+.about-grid > div:last-child { border-top-color: var(--line); }
+.about-grid > div > p:not(.mono) {
   font-size: clamp(1rem, 1.15vw, 1.15rem);
   line-height: 1.65;
   color: var(--fg-2);
   margin: 0;
-  padding-top: 18px;
-  border-top: 2px solid var(--accent);
 }
-.about-grid p:first-child { border-top-color: var(--accent); }
-.about-grid p:nth-child(2) { border-top-color: var(--line); }
-.about-grid p:last-child { border-top-color: var(--line); color: var(--fg); }
+.about-grid > div:last-child > p:not(.mono) { color: var(--fg); }
 
 /* ────────────────────────────────────────────────────────────
    BOS INTRO
