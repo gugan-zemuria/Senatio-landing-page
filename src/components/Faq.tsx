@@ -5,11 +5,11 @@ import { useEffect, useRef } from "react";
 const faqs = [
   {
     q: "Is this outsourcing?",
-    a: "No. Senatio is built around managed engineering capability from India. The model is designed to give clients stronger operating structure, more continuity, and more control than a traditional outsourcing relationship.",
+    a: "No. Senatio is built around managed engineering capability from India. The model gives clients more structure, more continuity, and more control than a traditional outsourcing relationship.",
   },
   {
     q: "Is this staff augmentation?",
-    a: "No. Senatio is not built around loose seat-filling. The model is based on building and operating engineering teams with structure, visibility, and support.",
+    a: "No. Senatio is not built around loose seat-filling. The model is based on building and operating engineering teams with real structure and support.",
   },
   {
     q: "Do you only help with hiring?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Do you help improve workflows too?",
-    a: "Yes, where workflow bottlenecks are hurting execution. Senatio can help improve coordination, visibility, reporting, and practical automation around engineering delivery.",
+    a: "Yes. Senatio helps improve coordination, visibility, reporting, and practical automation where those issues are hurting execution.",
   },
   {
     q: "How quickly can a team be launched?",
@@ -35,14 +35,7 @@ const faqs = [
     q: "How is pricing structured?",
     a: "Pricing is structured around a setup phase, monthly managed team pricing, and separately scoped execution improvement or internal solution work where needed.",
   },
-  {
-    q: "What makes Senatio different from a recruiting firm?",
-    a: "Recruiting firms help fill roles. Senatio helps clients build, operate, and scale engineering teams from India with the structure needed to make those teams work well over time.",
-  },
-  {
-    q: "What makes Senatio different from a body-shop model?",
-    a: "The focus is not on renting seats. The focus is on managed engineering capability, execution quality, operating support, and cleaner long-term scaling.",
-  },
+
 ];
 
 export default function Faq() {

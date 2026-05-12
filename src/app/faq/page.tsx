@@ -16,7 +16,7 @@ const faqSchema = {
       name: "Is this outsourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Senatio is built around managed engineering capability from India. The model is designed to give clients stronger operating structure, more continuity, and more control than a traditional outsourcing relationship.",
+        text: "No. Senatio is built around managed engineering capability from India. The model gives clients more structure, more continuity, and more control than a traditional outsourcing relationship.",
       },
     },
     {
@@ -24,7 +24,7 @@ const faqSchema = {
       name: "Is this staff augmentation?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Senatio is not built around loose seat-filling. The model is based on building and operating engineering teams with structure, visibility, and support.",
+        text: "No. Senatio is not built around loose seat-filling. The model is based on building and operating engineering teams with real structure and support.",
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: "Do you help improve workflows too?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, where workflow bottlenecks are hurting execution. Senatio can help improve coordination, visibility, reporting, and practical automation around engineering delivery.",
+        text: "Yes. Senatio helps improve coordination, visibility, reporting, and practical automation where those issues are hurting execution.",
       },
     },
     {
@@ -75,29 +75,14 @@ const faqSchema = {
         text: "Pricing is structured around a setup phase, monthly managed team pricing, and separately scoped execution improvement or internal solution work where needed.",
       },
     },
-    {
-      "@type": "Question",
-      name: "What makes Senatio different from a recruiting firm?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Recruiting firms help fill roles. Senatio helps clients build, operate, and scale engineering teams from India with the structure needed to make those teams work well over time.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What makes Senatio different from a body-shop model?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The focus is not on renting seats. The focus is on managed engineering capability, execution quality, operating support, and cleaner long-term scaling.",
-      },
-    },
+
   ],
 };
 
 export const metadata: Metadata = {
   title: "FAQ on Building Engineering Teams from India | Senatio",
   description:
-    "Answers to common questions about building engineering teams from India, managed execution, team pricing, workflow improvement, and scaling with Senatio.",
+    "Answers to common questions about building engineering teams from India, managed execution, pricing, workflow improvement, and scaling with Senatio.",
 };
 
 export default function FaqPage() {
