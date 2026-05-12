@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Hire Backend Engineers in India | Senatio",
   description:
-    "Hire backend engineers in India with Senatio. Build a stronger backend team with faster hiring, managed onboarding, better delivery structure, and long-term scaling support.",
+    "Hire backend engineers in India with Senatio. Faster hiring, managed onboarding, better delivery structure, and long-term scaling support.",
 };
 
 const BtnArrow = () => (

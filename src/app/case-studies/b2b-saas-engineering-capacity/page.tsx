@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
@@ -7,9 +8,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Case Study: Building Engineering Capacity from India Without Taking on Operating Burden | Senatio",
+  title: "B2B SaaS Engineering Capacity from India | Senatio",
   description:
-    "See how Senatio helped a global B2B SaaS company add engineering capacity from India without absorbing the usual hiring drag, payroll complexity, compliance exposure, and continuity risk.",
+    "How Senatio helped a B2B SaaS company add engineering capacity from India without absorbing hiring drag, compliance overhead, or continuity risk.",
 };
 
 const BtnArrow = () => (
@@ -42,9 +43,20 @@ const whatChanged = [
   "Added capacity felt commercially safer because it came with less hidden operating drag",
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://senatio.com" },
+    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://senatio.com/case-studies" },
+    { "@type": "ListItem", position: 3, name: "B2B SaaS Engineering Capacity", item: "https://senatio.com/case-studies/b2b-saas-engineering-capacity" },
+  ],
+};
+
 export default function B2bSaaSEngineeringCapacityPage() {
   return (
     <>
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Grain />
       <Navbar />
       <main>

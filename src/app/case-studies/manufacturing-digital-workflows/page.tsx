@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
@@ -7,9 +8,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Case Study: Replacing Physical Process Handling with Digital Workflows and Automation | Senatio",
+  title: "Digital Workflows & Automation for Manufacturing | Senatio",
   description:
-    "See how Senatio helped a manufacturing giant replace physical, manual operating processes with digital workflows, practical automation, stronger visibility, and better operating control.",
+    "How Senatio replaced manual physical processes with digital workflows, practical automation, stronger visibility, and better operating control for a manufacturing company.",
 };
 
 const BtnArrow = () => (
@@ -36,9 +37,20 @@ const whatChanged = [
   "The business was able to handle more work with better consistency and stronger control",
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://senatio.com" },
+    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://senatio.com/case-studies" },
+    { "@type": "ListItem", position: 3, name: "Manufacturing Digital Workflows", item: "https://senatio.com/case-studies/manufacturing-digital-workflows" },
+  ],
+};
+
 export default function ManufacturingDigitalWorkflowsPage() {
   return (
     <>
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Grain />
       <Navbar />
       <main>

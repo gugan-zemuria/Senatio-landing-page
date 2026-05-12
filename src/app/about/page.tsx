@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "About Senatio | Engineering Teams from India",
   description:
-    "Learn about Senatio's operator-led approach to helping global companies build, operate, and scale engineering teams from India with stronger execution and less friction.",
+    "Learn about Senatio's operator-led model for building, scaling, and improving engineering teams from India with stronger execution and less friction.",
 };
 
 const BtnArrow = () => (

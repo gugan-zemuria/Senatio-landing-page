@@ -9,7 +9,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Engineering Team Scaling Partner | Senatio",
   description:
-    "Scale your engineering team with more control using Senatio. Launch faster, add engineers cleanly, maintain quality, and reduce operational friction as your team grows.",
+    "Scale your engineering team with more control. Launch faster, add engineers cleanly, maintain quality, and reduce operational friction as your team grows.",
 };
 
 const BtnArrow = () => (

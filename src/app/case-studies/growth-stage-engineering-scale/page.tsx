@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
@@ -7,9 +8,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Case Study: Making Engineering Scale Feel Controlled Instead of Chaotic | Senatio",
+  title: "Controlled Engineering Scale for Growth Teams | Senatio",
   description:
-    "See how Senatio helped a growth-stage product company improve delivery visibility, reduce management drag, and make engineering scale feel more controlled and commercially usable.",
+    "How Senatio helped a growth-stage company improve delivery visibility, reduce management drag, and make engineering scale feel controlled and commercially usable.",
 };
 
 const BtnArrow = () => (
@@ -35,9 +36,20 @@ const whatChanged = [
   "Engineering scale became more usable because the business got more control back from it",
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://senatio.com" },
+    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://senatio.com/case-studies" },
+    { "@type": "ListItem", position: 3, name: "Growth-Stage Engineering Scale", item: "https://senatio.com/case-studies/growth-stage-engineering-scale" },
+  ],
+};
+
 export default function GrowthStageEngineeringScalePage() {
   return (
     <>
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Grain />
       <Navbar />
       <main>

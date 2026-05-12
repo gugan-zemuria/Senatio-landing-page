@@ -9,9 +9,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "How to Build and Scale an Engineering Team from India | Senatio",
+  title: "How Senatio Builds Engineering Teams from India | Senatio",
   description:
-    "Learn how Senatio helps global companies build, operate, and scale engineering teams from India through faster hiring, stronger operating structure, and reliable execution support.",
+    "Learn how Senatio builds, operates, and scales engineering teams from India through faster hiring, stronger operating structure, and reliable execution support.",
 };
 
 const BtnArrow = () => (

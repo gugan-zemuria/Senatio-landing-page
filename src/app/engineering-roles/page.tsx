@@ -10,7 +10,7 @@ import RevealObserver from "@/components/RevealObserver";
 export const metadata: Metadata = {
   title: "Engineering Roles and Team Design from India | Senatio",
   description:
-    "Explore the engineering roles Senatio helps global companies build from India, including frontend, backend, full-stack, QA, DevOps, data, AI, and technical leadership roles.",
+    "Explore frontend, backend, full-stack, QA, DevOps, data, AI, and leadership roles Senatio helps global companies build from India.",
 };
 
 const BtnArrow = () => (

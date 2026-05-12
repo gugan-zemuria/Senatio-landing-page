@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Engineering Team Case Studies and Delivery Outcomes | Senatio",
+  title: "Engineering Team Case Studies & Delivery Outcomes | Senatio",
   description:
     "See how Senatio helps companies launch engineering teams from India faster, improve delivery execution, and scale with more structure and control.",
 };

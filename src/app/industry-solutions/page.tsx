@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Industry Solutions for Engineering Teams and Execution Improvement | Senatio",
+  title: "Industry-Specific Engineering Solutions | Senatio",
   description:
-    "See how Senatio helps different types of companies build engineering teams from India, improve workflows, and solve internal execution problems through practical systems and automation.",
+    "See how Senatio helps different companies build engineering teams from India, improve workflows, and solve execution problems through practical systems and automation.",
 };
 
 const BtnArrow = () => (

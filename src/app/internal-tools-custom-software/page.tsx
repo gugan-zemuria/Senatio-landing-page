@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Internal Tools and Custom Software for Execution Improvement | Senatio",
+  title: "Internal Tools & Custom Software | Senatio",
   description:
-    "Senatio helps companies build internal tools, dashboards, workflow systems, and practical custom software that improve execution, visibility, and operating speed.",
+    "Senatio builds internal tools, dashboards, workflow systems, and practical custom software that improve execution, visibility, and operating speed.",
 };
 
 const BtnArrow = () => (
