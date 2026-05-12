@@ -7,13 +7,13 @@ type Region = "us" | "india";
 function detectRegion(): Region {
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (tz && tz.startsWith("America/")) {
-      return "us";
+    if (tz === "Asia/Kolkata" || tz === "Asia/Calcutta") {
+      return "india";
     }
   } catch {
     /* fall through */
   }
-  return "india";
+  return "us";
 }
 
 export default function FooterAddress() {

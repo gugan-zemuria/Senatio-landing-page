@@ -15,16 +15,24 @@ export default function Footer() {
               An operator-led partner for global companies building engineering
               teams from India.
             </p>
-            <div
-              style={{
-                display: "flex",
-                gap: "8px",
-                alignItems: "center",
-                color: "var(--accent)",
-              }}
-            >
-              <span className="status-dot" aria-hidden="true" />
-              <span style={{ color: "var(--muted)" }}>Operational</span>
+            <div style={{ marginTop: "20px" }}>
+              <p style={{ fontSize: "0.72rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--muted)", marginBottom: "10px" }}>
+                Backed by
+              </p>
+              {/* Dark mode: SVG logo inverted to white so it's visible on dark background */}
+              <img
+                src="/zemuriaco_logo.svg"
+                alt="Zemuria Venture Studio"
+                className="logo-dark"
+                style={{ width: "160px", height: "42px", objectFit: "contain", objectPosition: "left center", filter: "brightness(0) invert(1)" }}
+              />
+              {/* Light mode: black PNG logo visible on light background */}
+              <img
+                src="/ZVS_logo_blk.png"
+                alt="Zemuria Venture Studio"
+                className="logo-light"
+                style={{ width: "160px", height: "42px", objectFit: "contain", objectPosition: "left center" }}
+              />
             </div>
           </div>
           <div className="foot-col">
@@ -66,8 +74,8 @@ export default function Footer() {
         </div>
 
         <div className="foot-bottom">
-          <span>&copy; Senatio · Build · Operate · Scale</span>
-          <span>Managed engineering capability from India</span>
+          <span className="foot-copy">Copyright &copy; 2024–2026 by Senatio.</span>
+          <span className="foot-legal">a <a href="https://zemuria.com/" target="_blank" rel="noopener noreferrer" className="foot-link">Zemuria Inc.</a> Brand. Contracts are executed by the relevant entity (<a href="https://zemuria.com/" target="_blank" rel="noopener noreferrer" className="foot-link">Zemuria Inc.</a> USA or Mercemur Technologies Pvt Ltd India).</span>
         </div>
       </div>
     </footer>
