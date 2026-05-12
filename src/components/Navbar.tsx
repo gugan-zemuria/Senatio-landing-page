@@ -24,7 +24,7 @@ export default function Navbar() {
         <Link href="/" className="brand" aria-label="Senatio home">
           <img src="/senatio_dark_logo.svg" alt="Senatio" className="brand-logo logo-dark" />
           <img src="/senatio_light_logo.svg" alt="Senatio" className="brand-logo logo-light" />
-          <span className="brand-suffix">Build · Operate · Scale</span>
+          {/* <span className="brand-suffix">Build · Operate · Scale</span> */}
         </Link>
         <ul className="nav-links">
           <li>
