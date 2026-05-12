@@ -465,6 +465,93 @@ html[data-theme="light"] .logo-dark { display: none; }
 .nav-links a:hover { color: var(--fg); }
 .nav-links a:hover::after { transform: scaleX(1); }
 
+/* dropdown */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--fg-2);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0;
+  transition: color .25s ease;
+  position: relative;
+  text-decoration: none;
+}
+.nav-dropdown-trigger::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -6px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s cubic-bezier(.7,0,.2,1);
+}
+.nav-dropdown:hover > .nav-dropdown-trigger,
+.nav-dropdown.open > .nav-dropdown-trigger { color: var(--fg); }
+.nav-dropdown:hover > .nav-dropdown-trigger::after,
+.nav-dropdown.open > .nav-dropdown-trigger::after { transform: scaleX(1); }
+
+.nav-dropdown-arrow {
+  transition: transform .3s ease;
+}
+.nav-dropdown:hover > .nav-dropdown-trigger .nav-dropdown-arrow,
+.nav-dropdown.open > .nav-dropdown-trigger .nav-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 210px;
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+  pointer-events: none;
+  z-index: 50;
+}
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 13px;
+  color: var(--fg-2);
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease;
+}
+.nav-dropdown-menu a:hover {
+  background: var(--bg-2);
+  color: var(--fg);
+}
+.nav-dropdown-menu a::after { display: none; }
+
 @media (max-width: 920px) {
   .nav-links { display: none; }
   .brand-suffix { display: none; }
