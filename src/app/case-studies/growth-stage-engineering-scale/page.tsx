@@ -191,56 +191,35 @@ export default function GrowthStageEngineeringScalePage() {
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The improvement came from recognizing that growth-stage engineering problems are rarely only about headcount. They are about whether the company has a strong enough operating system to turn headcount into output without drowning leadership in coordination cost.
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "32px", maxWidth: "680px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+                The improvement came from recognizing that growth-stage engineering problems are rarely only about headcount. They are about whether the company has a strong enough operating system to turn headcount into output without drowning leadership in coordination cost. Senatio improved that operating system.
               </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Senatio improved that operating system.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="trust-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="trust-h">
-                  Why this makes buyers trust <em>Senatio.</em>
-                </h2>
+              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
+                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
+                  Why buyers trust Senatio
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+                  A serious buyer should see that Senatio does not confuse motion with progress. It understands the point at which a growing team starts creating drag instead of leverage. It understands that visibility, rhythm, and control are not soft topics. They are part of the commercial usability of the team itself. That is what makes this feel different from generic delivery advice. It reads like operator thinking because it is operator thinking.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                A serious buyer should see that Senatio does not confuse motion with progress. It understands the point at which a growing team starts creating drag instead of leverage. It understands that visibility, rhythm, and control are not soft topics. They are part of the commercial usability of the team itself.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That is what makes this feel different from generic delivery advice. It reads like operator thinking because it is operator thinking.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" aria-labelledby="bottom-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="bottom-h">
-                  Bottom <em>line.</em>
-                </h2>
+              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
+                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
+                  Bottom line
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem", margin: 0 }}>
+                  The client did not just scale engineering. It made engineering scale feel more controlled, more visible, and more worth the investment behind it.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem" }}>
-                The client did not just scale engineering. It made engineering scale feel more controlled, more visible, and more worth the investment behind it.
-              </p>
-            </div>
-            <div style={{ marginTop: "32px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
-                <span>Talk to us about making engineering scale feel more controlled</span>
-                <BtnArrow />
-              </Link>
+
+              <div>
+                <Link href="/contact" className="btn btn-primary">
+                  <span>Talk to us about making engineering scale feel more controlled</span>
+                  <BtnArrow />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

@@ -213,61 +213,45 @@ export default function B2bSaaSEngineeringCapacityPage() {
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                This case is exactly why the model is attractive to serious buyers.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                <strong>Build</strong> solves the speed and capacity problem.<br />
-                <strong>Operate</strong> solves the &ldquo;who carries the burden once the team is live?&rdquo; problem.<br />
-                <strong>Scale</strong> solves the flexibility problem by making it easier to grow or contract without rebuilding the structure from scratch.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That is what makes the offer commercially strong. The client was not just buying engineers. It was buying speed, lower burden, continuity, and optionality.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="trust-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="trust-h">
-                  Why this makes buyers trust <em>Senatio.</em>
-                </h2>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "32px", maxWidth: "680px" }} data-reveal>
+              <div>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+                  This case is exactly why the model is attractive to serious buyers.
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  <strong>Build</strong> solves the speed and capacity problem.<br />
+                  <strong>Operate</strong> solves the &ldquo;who carries the burden once the team is live?&rdquo; problem.<br />
+                  <strong>Scale</strong> solves the flexibility problem by making it easier to grow or contract without rebuilding the structure from scratch.
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  That is what makes the offer commercially strong. The client was not just buying engineers. It was buying speed, lower burden, continuity, and optionality.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                A serious buyer reading this should feel something important: these people understand the liabilities behind expansion, not just the headline opportunity. Payroll complexity. Compliance exposure. Continuity risk. Leadership distraction. The cost of getting locked into a team model that becomes hard to change later.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Senatio addresses those worries directly. That is why the offer feels credible at operator level, not just attractive at marketing level.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" aria-labelledby="bottom-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="bottom-h">
-                  Bottom <em>line.</em>
-                </h2>
+              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
+                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
+                  Why buyers trust Senatio
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+                  A serious buyer reading this should feel something important: these people understand the liabilities behind expansion, not just the headline opportunity. Payroll complexity. Compliance exposure. Continuity risk. Leadership distraction. The cost of getting locked into a team model that becomes hard to change later. Senatio addresses those worries directly. That is why the offer feels credible at operator level, not just attractive at marketing level.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem" }}>
-                The client did not just add engineers. It added engineering capacity without absorbing the usual hiring, payroll, compliance, continuity, and management burden that often makes expansion feel heavier than it is worth.
-              </p>
-            </div>
-            <div style={{ marginTop: "32px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
-                <span>Talk to us about building engineering capacity from India with less operating burden</span>
-                <BtnArrow />
-              </Link>
+
+              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
+                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
+                  Bottom line
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem", margin: 0 }}>
+                  The client did not just add engineers. It added engineering capacity without absorbing the usual hiring, payroll, compliance, continuity, and management burden that often makes expansion feel heavier than it is worth.
+                </p>
+              </div>
+
+              <div>
+                <Link href="/contact" className="btn btn-primary">
+                  <span>Talk to us about building engineering capacity from India with less operating burden</span>
+                  <BtnArrow />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

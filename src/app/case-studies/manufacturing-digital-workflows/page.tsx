@@ -198,56 +198,35 @@ export default function ManufacturingDigitalWorkflowsPage() {
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The work succeeded because Senatio did not diagnose the issue as &ldquo;the company needs software.&rdquo; It diagnosed it as &ldquo;the company is still relying on people to carry a system that should be carried by a workflow.&rdquo;
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "32px", maxWidth: "680px" }} data-reveal>
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+                The work succeeded because Senatio did not diagnose the issue as &ldquo;the company needs software.&rdquo; It diagnosed it as &ldquo;the company is still relying on people to carry a system that should be carried by a workflow.&rdquo; That is a much more useful level of thinking. Once the weak points were made visible and the workflow was redesigned around digital movement and practical automation, the business gained leverage that additional effort alone would never have created.
               </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That is a much more useful level of thinking. Once the weak points were made visible and the workflow was redesigned around digital movement and practical automation, the business gained leverage that additional effort alone would never have created.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="trust-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="trust-h">
-                  Why this makes buyers trust <em>Senatio.</em>
-                </h2>
+              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
+                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
+                  Why buyers trust Senatio
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
+                  A buyer reading this should feel that Senatio understands messy operational reality. Paper-driven handoffs. Spreadsheets pretending to be systems. Approvals living across calls, emails, and people&rsquo;s memory. Managers becoming human middleware because the workflow is not doing its job. That credibility matters. It tells the buyer these are people who can walk into operational complexity, understand it quickly, and improve it without hiding behind vague transformation language.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                A buyer reading this should feel that Senatio understands messy operational reality. Paper-driven handoffs. Spreadsheets pretending to be systems. Approvals living across calls, emails, and people&rsquo;s memory. Managers becoming human middleware because the workflow is not doing its job.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That credibility matters. It tells the buyer these are people who can walk into operational complexity, understand it quickly, and improve it without hiding behind vague transformation language.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="section" aria-labelledby="bottom-h">
-          <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="bottom-h">
-                  Bottom <em>line.</em>
-                </h2>
+              <div style={{ borderTop: "1px solid var(--line)", paddingTop: "28px" }}>
+                <p className="mono" style={{ marginBottom: "14px", color: "var(--accent)" }}>
+                  Bottom line
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem", margin: 0 }}>
+                  The client did not just digitize a process. It reduced dependence on physical handling, manual follow-up, and human workflow glue. The result was stronger control, better throughput, clearer visibility, and a business that could handle more work without scaling friction at the same rate.
+                </p>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.1rem" }}>
-                The client did not just digitize a process. It reduced dependence on physical handling, manual follow-up, and human workflow glue. The result was stronger control, better throughput, clearer visibility, and a business that could handle more work without scaling friction at the same rate.
-              </p>
-            </div>
-            <div style={{ marginTop: "32px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
-                <span>Talk to us about digitizing and automating broken internal workflows</span>
-                <BtnArrow />
-              </Link>
+
+              <div>
+                <Link href="/contact" className="btn btn-primary">
+                  <span>Talk to us about digitizing and automating broken internal workflows</span>
+                  <BtnArrow />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
