@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import RevealObserver from "@/components/RevealObserver";
 
 export const metadata: Metadata = {
-  title: "Industry-Specific Engineering Solutions | Senatio",
+  title: "Industry Solutions for Engineering Teams and Execution Improvement | Senatio",
   description:
-    "See how Senatio helps different companies build engineering teams from India, improve workflows, and solve execution problems through practical systems and automation.",
+    "See how Senatio helps different types of companies build engineering teams from India, improve workflows, and solve internal execution problems through practical systems and automation.",
 };
 
 const BtnArrow = () => (
@@ -47,15 +47,8 @@ export default function IndustrySolutionsPage() {
           </div>
         </section>
 
-        <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="is-solutions-h">
+        <section className="section" style={{ background: "var(--bg-2)" }}>
           <div className="wrap">
-            <div className="section-head">
-              <div data-reveal data-delay="1">
-                <h2 className="section-title" id="is-solutions-h">
-                  How we help different <em>companies.</em>
-                </h2>
-              </div>
-            </div>
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
