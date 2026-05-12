@@ -54,11 +54,20 @@ export default function ManufacturingDigitalWorkflowsPage() {
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "680px" }} data-reveal data-delay="1">
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "clamp(24px, 4vw, 48px)",
+                alignItems: "start",
+              }}
+              data-reveal
+              data-delay="1"
+            >
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
                 The client did not mainly have a software problem. It had a workflow reality problem. Important parts of the business were still being carried by physical process movement, spreadsheet logic, manual approvals, repeated follow-up, and people acting as the glue between broken steps. Senatio helped redesign the workflow, digitize the process, automate the repeatable parts, and turn effort-heavy operational movement into a more visible and manageable system.
               </p>
-              <div style={{ marginTop: "24px", padding: "20px 24px", border: "1px solid var(--line)", background: "var(--bg-2)", borderRadius: "8px" }}>
+              <div style={{ padding: "20px 24px", border: "1px solid var(--line)", background: "var(--bg-2)", borderRadius: "8px", alignSelf: "start" }}>
                 <p className="mono" style={{ margin: "0 0 4px 0" }}>Client profile</p>
                 <p style={{ margin: 0, fontSize: "1.05rem", color: "var(--fg)" }}>Large manufacturing company</p>
               </div>
@@ -68,23 +77,29 @@ export default function ManufacturingDigitalWorkflowsPage() {
 
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="problem-h">
           <div className="wrap">
-            <div className="section-head">
+            <div
+              style={{
+                display: "grid",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+            >
               <div data-reveal>
                 <h2 className="section-title" id="problem-h">
                   The real business <em>problem.</em>
                 </h2>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal data-delay="1">
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The company had scale, demand, and operational depth. But several critical workflows were still moving in a way that belonged to an earlier stage of the business.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Approvals were spread across physical documents, spreadsheets, calls, emails, and manual updates. Status often lived inside people rather than systems. Teams could move work forward, but only by repeatedly checking, chasing, confirming, and compensating. Managers were often acting like human workflow engines, pushing information from one step to the next just to keep the operation moving.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That kind of burden is dangerous in a large business because it hides in plain sight. The company looks operational. Work is moving. But too much of the movement is powered by effort instead of design.
-              </p>
+              <div data-reveal data-delay="1">
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                  The company had scale, demand, and operational depth. But several critical workflows were still moving in a way that belonged to an earlier stage of the business.
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  Approvals were spread across physical documents, spreadsheets, calls, emails, and manual updates. Status often lived inside people rather than systems. Teams could move work forward, but only by repeatedly checking, chasing, confirming, and compensating. Managers were often acting like human workflow engines, pushing information from one step to the next just to keep the operation moving.
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  That kind of burden is dangerous in a large business because it hides in plain sight. The company looks operational. Work is moving. But too much of the movement is powered by effort instead of design.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -115,37 +130,49 @@ export default function ManufacturingDigitalWorkflowsPage() {
 
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="stake-h">
           <div className="wrap">
-            <div className="section-head">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+            >
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="stake-h">
                   What was actually at <em>stake.</em>
                 </h2>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                This was not just an efficiency issue. It was an operational leverage issue.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                If those workflows stayed physical and manual, the company would keep needing more effort to handle more work. Throughput would improve slowly. Process inconsistency would remain high. Management visibility would stay weak. And every attempt to grow output would recreate the same friction at a larger scale.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That is the trap many large businesses fall into. They scale activity before they scale the system that activity depends on.
-              </p>
+              <div data-reveal>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                  This was not just an efficiency issue. It was an operational leverage issue.
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  If those workflows stayed physical and manual, the company would keep needing more effort to handle more work. Throughput would improve slowly. Process inconsistency would remain high. Management visibility would stay weak. And every attempt to grow output would recreate the same friction at a larger scale.
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  That is the trap many large businesses fall into. They scale activity before they scale the system that activity depends on.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="section" aria-labelledby="senatio-h">
           <div className="wrap">
-            <div className="section-head">
+            <div
+              style={{
+                display: "grid",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+            >
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="senatio-h">
                   What Senatio <em>did.</em>
                 </h2>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
+              <div data-reveal>
               <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
                 Senatio started by treating the problem as a workflow redesign problem, not a tooling purchase problem.
               </p>
@@ -161,6 +188,7 @@ export default function ManufacturingDigitalWorkflowsPage() {
               <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
                 What changed was not only the software layer. The operating behavior of the workflow changed.
               </p>
+              </div>
             </div>
           </div>
         </section>
@@ -198,7 +226,7 @@ export default function ManufacturingDigitalWorkflowsPage() {
                 </h2>
               </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "32px", maxWidth: "680px" }} data-reveal>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "clamp(24px, 4vw, 48px)" }} data-reveal>
               <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
                 The work succeeded because Senatio did not diagnose the issue as &ldquo;the company needs software.&rdquo; It diagnosed it as &ldquo;the company is still relying on people to carry a system that should be carried by a workflow.&rdquo; That is a much more useful level of thinking. Once the weak points were made visible and the workflow was redesigned around digital movement and practical automation, the business gained leverage that additional effort alone would never have created.
               </p>

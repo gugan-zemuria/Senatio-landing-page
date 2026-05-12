@@ -86,7 +86,6 @@ export default function B2bSaaSEngineeringCapacityPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
                 gap: "clamp(24px, 4vw, 64px)",
                 alignItems: "start",
               }}
@@ -172,7 +171,6 @@ export default function B2bSaaSEngineeringCapacityPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
                 gap: "clamp(24px, 4vw, 64px)",
                 alignItems: "start",
               }}

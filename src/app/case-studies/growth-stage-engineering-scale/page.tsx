@@ -53,11 +53,20 @@ export default function GrowthStageEngineeringScalePage() {
                 </h2>
               </div>
             </div>
-            <div style={{ maxWidth: "680px" }} data-reveal data-delay="1">
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "clamp(24px, 4vw, 48px)",
+                alignItems: "start",
+              }}
+              data-reveal
+              data-delay="1"
+            >
+              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
                 The company already had engineers. What it did not have was enough operating structure to make growth feel controlled. Reporting was inconsistent, delivery rhythm was unstable, and leadership could feel the organization getting heavier without becoming easier to steer. Senatio helped strengthen the execution layer around the team so scale created more leverage instead of more noise.
               </p>
-              <div style={{ marginTop: "24px", padding: "20px 24px", border: "1px solid var(--line)", background: "var(--bg-2)", borderRadius: "8px" }}>
+              <div style={{ padding: "20px 24px", border: "1px solid var(--line)", background: "var(--bg-2)", borderRadius: "8px", alignSelf: "start" }}>
                 <p className="mono" style={{ margin: "0 0 4px 0" }}>Client profile</p>
                 <p style={{ margin: 0, fontSize: "1.05rem", color: "var(--fg)" }}>Growth-stage product company</p>
               </div>
@@ -67,23 +76,30 @@ export default function GrowthStageEngineeringScalePage() {
 
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="problem-h">
           <div className="wrap">
-            <div className="section-head">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minax(320px, 1fr))",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+            >
               <div data-reveal>
                 <h2 className="section-title" id="problem-h">
                   The real business <em>problem.</em>
                 </h2>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal data-delay="1">
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                The company had crossed the line where informal coordination was no longer enough. Earlier on, a small number of strong people, high energy, and close communication could cover a lot of structural weakness. But as the business grew, those same habits started to create drag.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                The roadmap was broader. More workstreams were running in parallel. Delivery dependencies were becoming harder to see. Leadership needed clearer visibility into what was on track, what was blocked, and where pressure was building. Instead, too much of the real picture still had to be reconstructed manually by managers.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                This is the stage where many growth companies make an expensive mistake. They interpret the pain as a pure headcount issue and hire into a weak operating system. That usually creates more coordination cost, not more control.
-              </p>
+              <div data-reveal data-delay="1">
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                  The company had crossed the line where informal coordination was no longer enough. Earlier on, a small number of strong people, high energy, and close communication could cover a lot of structural weakness. But as the business grew, those same habits started to create drag.
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  The roadmap was broader. More workstreams were running in parallel. Delivery dependencies were becoming harder to see. Leadership needed clearer visibility into what was on track, what was blocked, and where pressure was building. Instead, too much of the real picture still had to be reconstructed manually by managers.
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  This is the stage where many growth companies make an expensive mistake. They interpret the pain as a pure headcount issue and hire into a weak operating system. That usually creates more coordination cost, not more control.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -114,46 +130,59 @@ export default function GrowthStageEngineeringScalePage() {
 
         <section className="section" style={{ background: "var(--bg-2)" }} aria-labelledby="stake-h">
           <div className="wrap">
-            <div className="section-head">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+            >
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="stake-h">
                   What was actually at <em>stake.</em>
                 </h2>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                If the company kept scaling without improving the operating layer underneath the team, every new hire risked adding more reporting inconsistency, more management drag, and more coordination overhead. The organization would become larger without becoming easier to run.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                That is a costly trap. You keep funding more capacity, but leadership still feels blind when clarity matters most. Scale starts looking impressive from the outside while becoming expensive to control from the inside.
-              </p>
+              <div data-reveal>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                  If the company kept scaling without improving the operating layer underneath the team, every new hire risked adding more reporting inconsistency, more management drag, and more coordination overhead. The organization would become larger without becoming easier to run.
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  That is a costly trap. You keep funding more capacity, but leadership still feels blind when clarity matters most. Scale starts looking impressive from the outside while becoming expensive to control from the inside.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="section" aria-labelledby="senatio-h">
           <div className="wrap">
-            <div className="section-head">
+            <div
+              style={{
+                display: "grid",
+                gap: "clamp(24px, 4vw, 64px)",
+                alignItems: "start",
+              }}
+            >
               <div data-reveal data-delay="1">
                 <h2 className="section-title" id="senatio-h">
                   What Senatio <em>did.</em>
                 </h2>
               </div>
-            </div>
-            <div style={{ maxWidth: "680px" }} data-reveal>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-                Senatio treated the problem as an execution system problem, not a staffing problem.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Instead of asking how to add more engineers faster, the work focused on how to make the existing and future team easier to run. That meant improving operating rhythm, strengthening reporting expectations, making progress and blockers more visible, and reducing the amount of manual intervention needed just to keep the organization aligned.
-              </p>
-              <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                The goal was not to install bureaucracy. The goal was to create usable control. Leadership needed to feel that scale was becoming more manageable, not more fragile.
-              </p>
-              <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
-                Senatio helped create a stronger execution layer around the team so growth did not depend on constant heroic coordination from managers and founders. Once that layer improved, the same engineering capacity became far more commercially useful because the business could actually see it, steer it, and trust it.
-              </p>
+              <div data-reveal>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem" }}>
+                  Senatio treated the problem as an execution system problem, not a staffing problem.
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  Instead of asking how to add more engineers faster, the work focused on how to make the existing and future team easier to run. That meant improving operating rhythm, strengthening reporting expectations, making progress and blockers more visible, and reducing the amount of manual intervention needed just to keep the organization aligned.
+                </p>
+                <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  The goal was not to install bureaucracy. The goal was to create usable control. Leadership needed to feel that scale was becoming more manageable, not more fragile.
+                </p>
+                <p style={{ color: "var(--fg)", lineHeight: 1.65, fontSize: "1.05rem", marginTop: "16px" }}>
+                  Senatio helped create a stronger execution layer around the team so growth did not depend on constant heroic coordination from managers and founders. Once that layer improved, the same engineering capacity became far more commercially useful because the business could actually see it, steer it, and trust it.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -191,7 +220,7 @@ export default function GrowthStageEngineeringScalePage() {
                 </h2>
               </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "32px", maxWidth: "680px" }} data-reveal>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "clamp(24px, 4vw, 48px)" }} data-reveal>
               <p style={{ color: "var(--fg-2)", lineHeight: 1.65, fontSize: "1.05rem", margin: 0 }}>
                 The improvement came from recognizing that growth-stage engineering problems are rarely only about headcount. They are about whether the company has a strong enough operating system to turn headcount into output without drowning leadership in coordination cost. Senatio improved that operating system.
               </p>
