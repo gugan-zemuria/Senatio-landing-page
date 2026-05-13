@@ -132,6 +132,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "sales",
+                email: "contact@senatio.com",
                 url: "https://senatio.com/contact",
               },
             }),

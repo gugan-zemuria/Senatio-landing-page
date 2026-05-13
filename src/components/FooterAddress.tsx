@@ -29,19 +29,25 @@ export default function FooterAddress() {
 
   if (isIndia) {
     return (
-      <p className="foot-addr">
-        <strong>India</strong>
-        Suite No. 33, 388 Vazhudavur Main Road<br />
-        Shanmugapuram, Pondicherry 605009
-      </p>
+      <>
+        <p className="foot-addr">
+          <strong>India</strong>
+          Suite No. 33, 388 Vazhudavur Main Road<br />
+          Shanmugapuram, Pondicherry 605009
+        </p>
+        <a href="mailto:contact@senatio.com" className="foot-email">contact@senatio.com</a>
+      </>
     );
   }
 
   return (
-    <p className="foot-addr">
-      <strong>United States</strong>
-      1007 N Orange St., 4th Floor, #1189<br />
-      Wilmington, Delaware 19801
-    </p>
+    <>
+      <p className="foot-addr">
+        <strong>United States</strong>
+        1007 N Orange St., 4th Floor, #1189<br />
+        Wilmington, Delaware 19801
+      </p>
+      <a href="mailto:contact@senatio.com" className="foot-email">contact@senatio.com</a>
+    </>
   );
 }

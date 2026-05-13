@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-            <div style={{ marginTop: "32px" }} data-reveal>
+            <div className="contact-ctas" data-reveal>
               <button
                 className="btn btn-primary"
                 data-cal-namespace="30min"
@@ -57,6 +57,10 @@ export default function ContactPage() {
                 <span>Book a call</span>
                 <BtnArrow />
               </button>
+              <a href="mailto:contact@senatio.com" className="btn">
+                <span>Email us</span>
+                <BtnArrow />
+              </a>
             </div>
           </div>
         </section>
