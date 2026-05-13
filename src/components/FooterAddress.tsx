@@ -31,7 +31,6 @@ export default function FooterAddress() {
     return (
       <p className="foot-addr">
         <strong>India</strong>
-        Mercemur Technologies Private Limited<br />
         Suite No. 33, 388 Vazhudavur Main Road<br />
         Shanmugapuram, Pondicherry 605009
       </p>
