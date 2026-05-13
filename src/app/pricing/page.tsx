@@ -280,7 +280,7 @@ export default function PricingPage() {
             </div>
             <div style={{ ...s.max, ...s.stack }} data-reveal>
               <p style={s.text}>
-                Sometimes a you need more than a team. It may also need workflow redesign, internal tooling, process digitization, or custom software tied to execution improvement. In those cases, separate scoping is the cleaner and more transparent approach.
+                Sometimes you need more than a team. It may also need workflow redesign, internal tooling, process digitization, or custom software tied to execution improvement. In those cases, separate scoping is the cleaner and more transparent approach.
               </p>
               <p style={s.text}>
                 This is not a hidden upsell. It is simply a different kind of work. Managed team pricing covers the team and the operating layer around it. Deeper internal solution work should be scoped according to the problem, complexity, and level of implementation required.
