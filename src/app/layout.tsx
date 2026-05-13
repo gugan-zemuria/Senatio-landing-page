@@ -74,6 +74,21 @@ export const metadata: Metadata = {
       "Senatio helps global companies build and scale engineering teams from India with managed execution, workflow improvement, and practical custom software.",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: [
+      {
+        url: "/favicons/Favicon1.svg",
+        type: "image/svg+xml",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicons/favicon.ico",
+        type: "image/x-icon",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    apple: "/favicons/apple-touch-icon.png",
+  },
   verification: {
     google: "google53765785b38c8f17",
   },
@@ -96,7 +111,7 @@ export default function RootLayout({
           id="theme-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("senatio-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("senatio-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);var h=t==="light"?"/favicons/Favicon1.svg":"/favicons/favicon.ico";document.querySelectorAll('link[rel="icon"]').forEach(function(l){l.href=h;l.media=""})}}catch(e){}})();`,
           }}
         />
         <Script

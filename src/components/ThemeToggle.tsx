@@ -8,6 +8,14 @@ export default function ThemeToggle() {
     const next = current === "light" ? "dark" : "light";
     root.setAttribute("data-theme", next);
     localStorage.setItem("senatio-theme", next);
+    const href =
+      next === "light" ? "/favicons/Favicon1.svg" : "/favicons/favicon.ico";
+    document
+      .querySelectorAll<HTMLLinkElement>('link[rel="icon"]')
+      .forEach((l) => {
+        l.href = href;
+        l.media = "";
+      });
   };
 
   return (
