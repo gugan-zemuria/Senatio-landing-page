@@ -102,6 +102,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="dark"
       suppressHydrationWarning
       className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}
     >
@@ -111,7 +112,7 @@ export default function RootLayout({
           id="theme-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("senatio-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);var h=t==="light"?"/favicons/Favicon1.svg":"/favicons/favicon.ico";document.querySelectorAll('link[rel="icon"]').forEach(function(l){l.href=h;l.media=""})}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("senatio-theme");if(t!=="light"&&t!=="dark")t="dark";document.documentElement.setAttribute("data-theme",t);var h=t==="light"?"/favicons/Favicon1.svg":"/favicons/favicon.ico";document.querySelectorAll('link[rel="icon"]').forEach(function(l){l.href=h;l.media=""})}catch(e){}})();`,
           }}
         />
         <Script
