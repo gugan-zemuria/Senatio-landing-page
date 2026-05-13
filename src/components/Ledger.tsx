@@ -14,7 +14,7 @@ const BtnArrow = () => (
   </svg>
 );
 
-import Link from "next/link";
+
 
 const rows = [
   { num: "001", name: "Sourcing and hiring", desc: "Pipeline creation and hiring decisions tuned to your team design." },
@@ -68,10 +68,15 @@ export default function Ledger() {
               The value is not just access to engineers. The value is making the
               engineering team <em>actually work well.</em>
             </p>
-            <Link href="/contact" className="btn">
+            <button
+              className="btn"
+              data-cal-namespace="30min"
+              data-cal-link="senatio/30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
               <span>Discuss your team design</span>
               <BtnArrow />
-            </Link>
+            </button>
           </div>
         </div>
       </div>

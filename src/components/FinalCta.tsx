@@ -35,10 +35,15 @@ export default function FinalCta() {
             launch timelines, operating support, and commercial structure.
           </p>
           <div className="final-actions" data-reveal data-delay="3">
-            <a href="mailto:hello@senatio.com" className="btn btn-primary">
+            <button
+              className="btn btn-primary"
+              data-cal-namespace="30min"
+              data-cal-link="senatio/30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
               <span>Book a call</span>
               <BtnArrow />
-            </a>
+            </button>
             <span className="small">
               Launch fast &middot; Operate with discipline &middot; Scale with confidence
             </span>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
+import CalEmbed from "@/components/CalEmbed";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -137,6 +138,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <CalEmbed />
       </body>
       <GoogleAnalytics gaId="G-DE366NRKT0" />
     </html>

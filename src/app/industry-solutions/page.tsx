@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
 import FinalCta from "@/components/FinalCta";
@@ -63,10 +62,15 @@ export default function IndustrySolutionsPage() {
               ))}
             </div>
             <div style={{ marginTop: "32px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
+              <button
+                className="btn btn-primary"
+                data-cal-namespace="30min"
+                data-cal-link="senatio/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
                 <span>Talk to us about your company and operating model</span>
                 <BtnArrow />
-              </Link>
+              </button>
             </div>
           </div>
         </section>

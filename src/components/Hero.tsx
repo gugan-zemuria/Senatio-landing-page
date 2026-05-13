@@ -51,10 +51,15 @@ export default function Hero() {
             </p>
 
             <div className="hero-ctas">
-              <Link href="/contact" className="btn btn-primary">
+              <button
+                className="btn btn-primary"
+                data-cal-namespace="30min"
+                data-cal-link="senatio/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
                 <span>Book a call</span>
                 <BtnArrow />
-              </Link>
+              </button>
               <Link href="/how-it-works" className="btn">
                 <span>See how it works</span>
                 <BtnArrow />

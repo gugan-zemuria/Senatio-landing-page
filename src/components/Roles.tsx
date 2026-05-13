@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 
 const BtnArrow = () => (
   <svg
@@ -198,10 +198,15 @@ export default function Roles() {
           <p className="pull">
             We help clients build teams, <em>not just fill seats.</em>
           </p>
-          <Link href="/contact" className="btn">
+          <button
+            className="btn"
+            data-cal-namespace="30min"
+            data-cal-link="senatio/30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
             <span>Talk to us about your ideal team structure</span>
             <BtnArrow />
-          </Link>
+          </button>
         </div>
       </div>
     </section>

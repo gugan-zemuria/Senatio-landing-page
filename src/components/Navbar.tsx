@@ -84,10 +84,15 @@ export default function Navbar() {
 
         <div className="nav-actions">
           <ThemeToggle />
-          <Link href="/contact" className="btn btn-primary desktop-only-cta">
+          <button
+            className="btn btn-primary desktop-only-cta"
+            data-cal-namespace="30min"
+            data-cal-link="senatio/30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
             <span>Book a call</span>
             <BtnArrow />
-          </Link>
+          </button>
           <div className="mobile-kebab-wrapper">
             <KebabMenu items={[
               { href: "/", label: "Home" },

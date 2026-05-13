@@ -136,10 +136,15 @@ export default function CaseStudiesPage() {
               ))}
             </div>
             <div style={{ marginTop: "32px" }} data-reveal>
-              <Link href="/contact" className="btn btn-primary">
+              <button
+                className="btn btn-primary"
+                data-cal-namespace="30min"
+                data-cal-link="senatio/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
                 <span>Talk to us about your engineering team</span>
                 <BtnArrow />
-              </Link>
+              </button>
             </div>
           </div>
         </section>
