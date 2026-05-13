@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -48,9 +47,18 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-            <div style={{ marginTop: "32px" }} data-reveal>
-              <a href="mailto:hello@senatio.com" className="btn btn-primary">
+            <div className="contact-ctas" data-reveal>
+              <button
+                className="btn btn-primary"
+                data-cal-namespace="30min"
+                data-cal-link="senatio/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              >
                 <span>Book a call</span>
+                <BtnArrow />
+              </button>
+              <a href="mailto:contact@senatio.com" className="btn">
+                <span>Email us</span>
                 <BtnArrow />
               </a>
             </div>

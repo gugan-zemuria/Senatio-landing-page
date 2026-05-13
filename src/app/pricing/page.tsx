@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Grain from "@/components/Grain";
 import Navbar from "@/components/Navbar";
 import FinalCta from "@/components/FinalCta";

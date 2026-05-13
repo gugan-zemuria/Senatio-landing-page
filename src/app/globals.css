@@ -1924,6 +1924,25 @@ footer {
   display: block;
   margin-bottom: 4px;
 }
+.foot-email {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+.foot-email:hover { color: var(--accent); }
+
+.contact-ctas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
 .foot-bottom {
   margin-top: 48px;
   padding-top: 20px;
