@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 function detectIndia(): boolean {
-  // 1. Check cookie set by middleware (Vercel production / manual override)
+  // 1. Check cookie set by middleware (Cloudflare production / manual override)
   const cookies = document.cookie.split("; ");
   const geo = cookies.find((c) => c.startsWith("geo-country="));
   if (geo) return geo === "geo-country=IN";
